@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+
+<name>MiniCalendar</name>
+<creationDate>31 October 2016</creationDate>
+<author>Les Arbres Design</author>
+<copyright>Les Arbres Design 2010-2016</copyright>
+<license>GPL</license>
+<authorUrl>http://www.lesarbresdesign.info</authorUrl>
+<version>3.07</version>
+<description>MiniCalendar</description>
+
+<files>
+	<filename module="mod_minicalendar">mod_minicalendar.php</filename>
+	<filename>helper.php</filename>
+	<filename>index.html</filename>
+	<folder>language</folder>
+</files>
+
+<config>
+<fields name="params">
+<fieldset name="basic">
+	<field name="startyear" type="text" label="MOD_MINICALENDAR_L_DEFAULT_YEAR" description="MOD_MINICALENDAR_D_DEFAULT_YEAR" />
+	
+	<field name="startmonth" type="text" label="MOD_MINICALENDAR_L_DEFAULT_MONTH" description="MOD_MINICALENDAR_D_DEFAULT_MONTH" />
+	
+	<field name="dayLength" type="text" default="1" label="MOD_MINICALENDAR_L_DAY_LENGTH" description="MOD_MINICALENDAR_D_DAY_LENGTH" />
+	
+	<field name="firstDay" type="list" default="0" label="MOD_MINICALENDAR_L_FIRST_DAY" description="MOD_MINICALENDAR_D_FIRST_DAY">
+		<option value="0">SUNDAY</option>
+		<option value="1">MONDAY</option>
+		<option value="2">TUESDAY</option>
+		<option value="3">WEDNESDAY</option>
+		<option value="4">THURSDAY</option>
+		<option value="5">FRIDAY</option>
+		<option value="6">SATURDAY</option>
+	</field>
+	<field name="numMonths" type="text" default="1" label="MOD_MINICALENDAR_L_NUM_MONTHS" description="MOD_MINICALENDAR_D_NUM_MONTHS" />
+	
+	<field name="numCols" type="text" default="1" label="MOD_MINICALENDAR_L_NUM_COLUMNS" description="MOD_MINICALENDAR_D_NUM_COLUMNS" />
+	
+	<field name="weekHdr" type="text" label="MOD_MINICALENDAR_L_WEEK_HEADING" description="MOD_MINICALENDAR_D_WEEK_HEADING" />
+	
+	<field name="timeZone" type="list" default="0" label="MOD_MINICALENDAR_L_TIME_ZONE" description="MOD_MINICALENDAR_D_TIME_ZONE">
+		<option value="0">MOD_MINICALENDAR_SERVER_TIME</option>
+		<option value="Pacific/Samoa">UTC__11_00__MIDWAY_ISLAND__SAMOA</option>
+		<option value="US/Hawaii">UTC__10_00__HAWAII</option>
+		<option value="US/Alaska">UTC__09_00__ALASKA</option>
+		<option value="America/Vancouver">UTC__08_00__PACIFIC_TIME__US__AMP__CANADA_</option>
+		<option value="America/Denver">UTC__07_00__MOUNTAIN_TIME__US__AMP__CANADA_</option>
+		<option value="America/Regina">UTC__06_00__CENTRAL_TIME__US__AMP__CANADA___MEXICO_CITY</option>
+		<option value="America/Detroit">UTC__05_00__EASTERN_TIME__US__AMP__CANADA___BOGOTA__LIMA</option>
+		<option value="America/Halifax">UTC__04_00__ATLANTIC_TIME__CANADA___CARACAS__LA_PAZ</option>
+		<option value="America/Argentina/Buenos_Aires">UTC__03_00__BRAZIL__BUENOS_AIRES__GEORGETOWN</option>
+		<option value="America/Noronha">UTC__02_00__MID_ATLANTIC</option>
+		<option value="Atlantic/Azores">UTC__01_00__AZORES__CAPE_VERDE_ISLANDS</option>
+		<option value="UTC">UTC_00_00__WESTERN_EUROPE_TIME__LONDON__LISBON__CASABLANCA</option>
+		<option value="Europe/Amsterdam">UTC__01_00__AMSTERDAM__BERLIN__BRUSSELS__COPENHAGEN__MADRID__PARIS</option>
+		<option value="Africa/Cairo">UTC__02_00__ISTANBUL__JERUSALEM__KALININGRAD__SOUTH_AFRICA</option>
+		<option value="Asia/Kuwait">UTC__03_00__BAGHDAD__RIYADH__MOSCOW__ST__PETERSBURG</option>
+		<option value="Asia/Baku">UTC__04_00__ABU_DHABI__MUSCAT__BAKU__TBILISI</option>
+		<option value="Asia/Karachi">UTC__05_00__EKATERINBURG__ISLAMABAD__KARACHI__TASHKENT</option>
+		<option value="Asia/Dhaka">UTC__06_00__ALMATY__DHAKA</option>
+		<option value="Asia/Bangkok">UTC__07_00__BANGKOK__HANOI__JAKARTA__PHNOM_PENH</option>
+		<option value="Asia/Shanghai">UTC__08_00__BEIJING__PERTH__SINGAPORE__HONG_KONG</option>
+		<option value="Asia/Seoul">UTC__09_00__TOKYO__SEOUL__OSAKA__SAPPORO__YAKUTSK</option>
+		<option value="Australia/Sydney">UTC__10_00__EASTERN_AUSTRALIA__GUAM__VLADIVOSTOK</option>
+		<option value="Asia/Magadan">UTC__11_00__MAGADAN__SOLOMON_ISLANDS__NEW_CALEDONIA</option>
+		<option value="Pacific/Fiji">UTC__12_00__AUCKLAND__WELLINGTON__FIJI__KAMCHATKA</option>
+	</field>
+	
+	<field name="style_table" type="text" size="80" default="border-collapse:collapse; border:2px solid #9DA7B0; color:white; background-color:#a7c7dc;text-align:center;line-height:1.4;background:linear-gradient(135deg, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%); box-shadow: 0px 0px 20px 10px rgba(143,141,143,1);" label="MOD_MINICALENDAR_L_STYLE_TABLE" description="MOD_MINICALENDAR_D_STYLE_TABLE" />
+	<field name="style_head" type="text" size="80" default="border:1px solid whitesmoke; color:black; font-weight:bold;" label="MOD_MINICALENDAR_L_STYLE_HEADING" description="MOD_MINICALENDAR_D_STYLE_HEADING" />
+	<field name="style_day" type="text" size="80" default="border:1px solid whitesmoke; padding:3px; width:20px;" label="MOD_MINICALENDAR_L_STYLE_DAY" description="MOD_MINICALENDAR_D_STYLE_DAY" />
+	<field name="style_nonday" type="text" size="80" default="" label="MOD_MINICALENDAR_L_STYLE_NONDAY" description="MOD_MINICALENDAR_D_STYLE_NONDAY" />
+	<field name="style_today" type="text" size="80" default="font-weight:bold;outline: 4px ridge red;" label="MOD_MINICALENDAR_L_STYLE_TODAY" description="MOD_MINICALENDAR_D_STYLE_TODAY" />
+	<field name="style_week" type="text" size="80" default="color:red;" label="MOD_MINICALENDAR_L_STYLE_WEEKNUM" description="MOD_MINICALENDAR_D_STYLE_WEEKNUM" />
+	<field name="style_div" type="text" size="80" default="border-top:1px solid gray;" label="MOD_MINICALENDAR_L_STYLE_DIV" description="MOD_MINICALENDAR_D_STYLE_DIV" />
+
+	<field name="debug" type="radio" default="0" label="Debug" description="Creates a trace.txt file to send to support">
+		<option value="0">JNO</option>
+		<option value="1">JYES</option>
+	</field>
+
+</fieldset>
+</fields>
+</config>
+
+<updateservers>
+    <server type="extension" priority="2" name="MiniCalendar"><![CDATA[http://www.lesarbresdesign.info/jupdate?product=minicalendar]]></server>
+</updateservers>
+
+</extension>

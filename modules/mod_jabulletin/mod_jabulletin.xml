@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.1" client="site" method="upgrade">
+
+	<name>JA Bulletin</name>
+	<author>JoomlArt.com</author>
+	<creationDate>03 April 2015</creationDate>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights
+		Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+	</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>2.6.0</version>
+	<updateservers>
+		<server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>
+	<description>
+	<![CDATA[
+		<div style='text-align: left;'>
+	   <span style="color: #008000;">
+	   	<strong>JA Bulletin Module</strong>
+	   </span>
+	   <br />
+	   <div style='font-weight: normal'>
+	   <p><img alt="JA Bulletin Module" src="http://static.joomlart.com/images/stories/extensions/joomla/ja_bulletin.png" /></p>
+	   This module mimicks default Joomla most read and latest modules, with added support to show date and thumbnail images.
+	   
+	   <p style="clear:both"><span style="color: #ff6600;"><strong>Features:</strong></span></p>
+	   <ol><li>Show / hide Images in the list</li><li>Show or hide Date of the article.</li><li>Easy thumbnail generation. For more details on Thumbnail mode read this <a href="http://www.joomlart.com/forums/showthread.php?50325" title="JA thumbanil modes" target="_blank"><strong>tutorial</strong></a>.</li></ol>
+	   
+	   <p><strong><span style="color: #ff0000;">Important Instruction:</span></strong></p>
+	   <ol><li><strong>The module display can be enhanced by CSS overrides in the demo templates (used in over 20+ JA templates). Thus, when you used Bulletin in different templates, the results may vary and you may have to customize CSS to get desired effects.</strong></li></ol>
+	   <p><strong><span style="color: #ff0000;">Upgrade Method:</span><br /></strong></p>
+	   <ol>
+	   <li>You can install new version directly over this version. Uninstallation is not required. Backup any customized files before upgrading. OR</li>
+	   	<li>Use <strong><a href="http://extensions.joomla.org/extensions/core-enhancements/installers/12077" target="_blank">JA Extensions Manager</a></strong> Component for easy upgrades and rollbacks. <strong><a href="http://www.youtube.com/user/JoomlArt#p/c/BC9B0C0BFE98657E/2/mNAuJRmifG8" target="_blank">Watch Video.</a></strong></li>
+	   </ol>
+	   <p><span style="color: #008000;"><strong>Links:</strong></span></p>
+	   <ul><li><a target="_blank" href="http://www.joomlart.com/forums/showthread.php?49878">JA Bulletin - General User guide</a></li><li><a target="_blank" href="http://pm.joomlart.com/browse/JAECMODBULLETINJIVI">Report Bug</a></li><li><a target="_blank" href="http://update.joomlart.com/#products.list//JA%20Bulletin%20Module%20for%20Joomla%202.5/">Updates &amp; Versions</a></li></ul>
+	   <p>Copyright 2004 - 2014 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+	   </div>
+	   </div>
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_jabulletin">mod_jabulletin.php</filename>
+		<filename>helper.php</filename>
+		<filename>jaimage.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_jabulletin.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_jabulletin/assets/elements">
+			<fieldset name="basic" label="CONTENT_SETTING">
+				<field type="japanel" path="/modules/mod_jabulletin/assets/elements/" />
+				<field 
+					name="type" 
+					type="list" 
+					default="latest" 
+					label="Type"
+					description="PARAMJABULTYPE">
+					<option value="latest">Latest News</option>
+					<option value="mostread">Most read</option>
+				</field>
+				<field 
+					name="ordering" 
+					type="list" 
+					default="published"
+					label="MOD_LATEST_NEWS_FIELD_ORDERING_LABEL" 
+					description="MOD_LATEST_NEWS_FIELD_ORDERING_DESC">
+					<option value="c_dsc">MOD_LATEST_NEWS_VALUE_RECENT_ADDED</option>
+					<option value="m_dsc">MOD_LATEST_NEWS_VALUE_RECENT_MODIFIED</option>
+					<option value="p_dsc">MOD_LATEST_NEWS_VALUE_RECENT_PUBLISHED
+					</option>
+
+				</field>
+				<field 
+					name="using_mode" 
+					type="list" 
+					default="catids" 
+					level="3"
+					label="CONTENT_SOURCE" description="CONTENT_SOURCE_DESC">
+					<option value="catids">JOOMLA_CONTENT</option>
+					<option value="com_k2">K2</option>
+				</field>
+				<field 
+					name="category" 
+					type="category" 
+					default="" 
+					extension="com_content"
+					multiple="true" 
+					size="5" 
+					label="CATEGORIES_SELECTION" 
+					description="CATEGORIES_SELECTION_DESC">
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				<field 
+					name="k2catsid" 
+					type="k2category" 
+					published="1"
+					class="mselect"
+					multiple="true"
+					default="" 
+					label="K2_CATEGORIES_SELECTION" 
+					description="K2_CATEGORIES_SELECTION_DESC" />
+				<field 
+					name="count" 
+					type="text" 
+					filter="integer" 
+					class="validate-numeric" 
+					default="5" 
+					label="Count"
+					description="COUNT_DESC" />
+                <field 
+					name="timerange" 
+					type="list" 
+					default="" 
+					label="Time range" 
+					description="Time range">
+					<option value="">All time</option>
+					<option value="1">1 day</option>
+					<option value="3">3 days</option>
+					<option value="7">1 week</option>
+					<option value="15">2 weeks</option>
+					<option value="30">1 month</option>
+					<option value="180">6 months</option>
+		        </field> 
+				<field 
+					name="show_featured" 
+					type="list" 
+					default="1"
+					label="FEATURED_ITEMS" 
+					description="FEATURED_ITEMS_DESC">
+					<option value="1">Show</option>
+					<option value="2">Show only featured articles</option>
+					<option value="0">Hide</option>
+				</field>
+
+				<field 
+					name="show_date"
+					type="radio"
+					default="1" 
+					class="btn-group"
+					label="SHOW_DATE"
+					description="PARAMSHOWDATE">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="show_author" 
+					type="radio" 
+					default="0" 
+					class="btn-group"
+					label="SHOW_AUTHOR"
+					description="SHOW_AUTHOR">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="show_readmore" 
+					type="radio" 
+					default="0"
+					class="btn-group"
+					label="SHOW_READMORE" 
+					description="SHOW_READMORE_LINK">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="show_hits" 
+					type="radio" 
+					default="0" 
+					class="btn-group"
+					label="SHOW_HITS"
+					description="PARAMSHOWHITS">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="use_custom_text" 
+					type="radio" 
+					default="1"
+					class="btn-group"
+					label="USE_CUSTOM_TEXT" 
+					description="USE_CUSTOM_TEXT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="custom_text" 
+					type="text" 
+					default="Hits:" 
+					label="CUSTOM_TEXT"
+					description="CUSTOM_TEXT_DESC" />
+			</fieldset>
+			
+			<fieldset name="image_setting" label="IMAGE_SETTING">
+				<field 
+					name="show_image" 
+					type="radio" 
+					default="1" 
+					class="btn-group"
+					label="SHOW_IMAGE"
+					description="PARAMSHOWIMAGE">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field 
+					name="thumbnail_mode" 
+					type="list" 
+					default="crop"
+					label="THUMBNAIL_MODE" 
+					description="THUMBNAIL_MODE_DESC">
+					<option value="none">USING_IMAGE_SOURCE</option>
+					<option value="resize">USING_RESIZE</option>
+					<option value="crop">USING_CROP</option>
+				</field>
+				<field 
+					name="use_ratio" 
+					type="radio" 
+					default="1"
+					class="btn-group"
+					label="RESIZE_WITH_THE_RATIO" 
+					description="RESIZE_WITH_THE_RATIO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="width" 
+					type="text" 
+					filter="integer" 
+					class="validate-numeric" 
+					default="40" 
+					label="Image_Width"
+					description="PARAMIMAGEWIDTH" />
+				<field 
+					name="height" 
+					type="text" 
+					filter="integer" 
+					class="validate-numeric" 
+					default="40" 
+					label="Image_Height"
+					description="PARAMIMAGEHEIGHT" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field 
+					name="moduleclass_sfx" 
+					type="text" 
+					default=""
+					label="MODULE_CLASS_SUFFIX" 
+					description="MODULE_CLASS_SUFFIX_DESC" />
+				<field 
+					name="cache" 
+					type="list" 
+					default="1" 
+					label="CACHING"
+					description="CACHING_DESC">
+					<option value="1">USE_GLOBAL</option>
+					<option value="0">NO_CACHING</option>
+				</field>
+				<field 
+					name="cache_time" 
+					type="text" 
+					default="30" 
+					label="CACHE_TIME"
+					description="CACHE_TIME_DESC" />
+				<field 
+					name="group"
+					hidden="true" 
+					type="japanel"
+					function="depend">
+					<option for="show_image" value="1" hideRow="true">
+						thumbnail_mode,width,height
+					</option>
+					<option for="thumbnail_mode" value="resize" hideRow="true">
+						use_ratio
+					</option>
+					<option for="show_hits" value="1" hideRow="true">
+						use_custom_text
+					</option>
+					<option for="type" value="latest" hideRow="true">
+						ordering
+					</option>
+					<option for="use_custom_text" value="1" hideRow="true">
+						custom_text
+					</option>
+					<option for="using_mode" value="com_k2" hideRow="true">
+						k2catsid
+					</option>
+					<option for="using_mode" value="catids" hideRow="true">
+						category
+					</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

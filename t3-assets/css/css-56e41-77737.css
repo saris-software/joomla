@@ -1,0 +1,24 @@
+
+
+/*===============================
+/sampo4/templates/ja_edenite_ii/css/custom.css
+================================================================================*/
+img{max-width:100%;vertical-align:middle;margin-top:-15px;margin-bottom:-20px}.navbar-default .navbar-nav > .open.active > a,.navbar-default .navbar-nav > .open.active > span,.navbar-default .navbar-nav > .open.active > a:hover,.navbar-default .navbar-nav > .open.active > span:hover,.navbar-default .navbar-nav > .open.active > a:focus,.navbar-default .navbar-nav > .open.active > span:focus{background:linear-gradient(#1d4f76,#1d4f76);color:#ffffff}.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > span,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > span:hover,.navbar-default .navbar-nav > .active > a:focus,.navbar-default .navbar-nav > .active > span:focus{color:#ffffff;background:linear-gradient(#1d4f76,#1d4f76)}.t3-copyright{color:#555555;font-size:12px;padding:10px 0 10px}
+
+
+/*===============================
+/sampo4/media/system/css/calendar-jos.css
+================================================================================*/
+div.calendar{position:relative;z-index:10000;width:226px}.calendar,.calendar table{border:1px solid #cccccc;font-size:11px;color:#000;cursor:default;background:#efefef;font-family:arial,verdana,sans-serif} .calendar .button{ text-align:center; padding:2px; }.calendar thead .title{ font-weight:bold; text-align:center;background:#333333;color:#ffffff;padding:2px}.calendar thead .headrow{ background:#dedede;color:#000}.calendar thead .name{ border-bottom:1px solid #cccccc;padding:2px;text-align:center;color:#000}.calendar thead .weekend{ color:#999}.calendar thead .hilite{ background:#bbbbbb;color:#000000;border:1px solid #cccccc;padding:1px}.calendar thead .active{ background:#c77;padding:2px 0px 0px 2px}.calendar thead .daynames{ background:#dddddd} .calendar tbody .day{ width:2em;text-align:right;padding:2px 4px 2px 2px}.calendar table .wn{padding:2px 3px 2px 2px;border-right:1px solid #cccccc;background:#dddddd}.calendar tbody .rowhilite td{background:#666666;color:#ffffff}.calendar tbody .rowhilite td.wn{background:#666666;color:#ffffff}.calendar tbody td.active{ background:#000000;color:#ffffff}.calendar tbody td.weekend{ color:#999}.calendar tbody td.selected{ font-weight:bold;background:#000000;color:#ffffff}.calendar tbody td.hilite{ background:#999999;color:#ffffff}.calendar tbody td.today{font-weight:bold}.calendar tbody .disabled{color:#999}.calendar tbody .emptycell{ visibility:hidden}.calendar tbody .emptyrow{ display:none} .calendar tfoot .footrow{ text-align:center;background:#cccccc;color:#000}.calendar tfoot .ttip{ border-top:1px solid #cccccc;background:#efefef;color:#000000}.calendar tfoot .hilite{ background:#666666;border:1px solid #f40;padding:1px}.calendar tfoot .active{ background:#999999;padding:2px 0px 0px 2px} .combo{position:absolute;display:none;top:0px;left:0px;width:4em;cursor:default;border:1px solid #655;background:#ffffff;color:#000;font-size:smaller}.combo .label{width:100%;text-align:center}.combo .hilite{background:#fc8}.combo .active{border-top:1px solid #cccccc;border-bottom:1px solid #cccccc;background:#efefef;font-weight:bold}
+
+
+/*===============================
+/sampo4/modules/mod_visitorcounter/mod_visitorcounter.css
+================================================================================*/
+.visitorcounter{width:95%;margin:auto}.visitorcounter .floatleft{float:left}.visitorcounter .floatright{float:right}.visitorcounter .clearboth{clear:both}.visitorcounter .center{text-align:center}.visitorcounter ul li{font-weight:bold}.visitorcounter p{clear:both;margin-bottom:6px}
+
+
+/*===============================
+http://localhost/sampo4/modules/mod_rseventspro_calendar/style.css
+================================================================================*/
+table.rs_calendar_module{font-size:12px}table.rs_calendar_module th{background:none repeat scroll 0 0 #828282;color:#FFFFFF;text-align:center;width:35px;line-height:20px}table.rs_calendar_module td{text-align:center;color:red;padding:0 !important;border:1px solid #C8C8C8}table.rs_calendar_module td.prev-month,table.rs_calendar_module td.next-month{color:grey}table.rs_calendar_module a{text-decoration:none;display:block;line-height:27px}table.rs_calendar_module td.curr-day{font-weight:bold !important}table.rs_calendar_module td.has-events a{background:none repeat scroll 0 0 #E6E6E6;font-weight:bold}.rs_table tr,.rs_table td{border:medium none}.rs_clear{width:100%;display:block;clear:both;height:1px;font-size:1px;line-height:1px}.rs_calendar_arrows_module{padding:5px}

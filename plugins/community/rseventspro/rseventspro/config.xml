@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="community">
+	<params>
+		<param name="count" type="text" default="5" size="3" label="Events limit" description="Select the number of events you wish to display" />		
+	</params>
+</install>

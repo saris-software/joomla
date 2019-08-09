@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<field name="showcussoc" class="advancedSelect" type="list" default="0" label="Show custom links" description="Show Custom Social Icon">
+		<option value="0">No</option>
+		<option value="1">Yes</option>
+	</field>
+
+	<field name="cussoc_icon" type="media" directory="" label="Icon" description="Icon" size="50" showon="showcussoc:1"/>
+	<field name="cussoc_lbl" type="text" default="Facebook" label="Label" description="Enter label for custom link" size="50" showon="showcussoc:1"/>
+	<field name="cussoc_url" type="text" default="https://www.facebook.com/bilalkabeerbutt" label="URL" description="Enter URL for custom link" size="50" showon="showcussoc:1"/>
+	<field name="cussoc_bg" type="color" default="#ccc" label="Background Color" description="Background color for custom link" showon="showcussoc:1"/>
+
+	<field type="spacer" name="nfi13" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showcussoc:1" />
+	<field name="showcussocicon" class="advancedSelect" type="list" default="2" label="Show icon or text" description="Show icon or text" showon="showcussoc:1">
+		<option value="0">Icon</option>
+		<option value="1">Text</option>
+		<option value="2">Both</option>
+	</field>		    
+</form>

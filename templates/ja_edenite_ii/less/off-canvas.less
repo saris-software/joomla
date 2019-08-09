@@ -1,0 +1,242 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ * @credits       Mary Lou - http://tympanus.net/codrops/2013/08/28/transitions-for-off-canvas-navigations/
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base-bs3/less/off-canvas.less";
+
+
+
+//
+// OFF-CANVAS
+// -------------------------------------
+
+// Toggle Button
+// -------------------
+.off-canvas-toggle {
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  padding: 0;
+  float: left;
+  width: @navbar-height;
+  height: @navbar-height;
+  line-height: @navbar-height;
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,&:focus,&:active {
+    background: rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(255,255,255,0.2);
+  }
+}
+
+//
+// OFF-CANVAS CONTENT STYLES
+// -------------------------------------
+.t3-off-canvas {
+
+  // Generic
+  // -----------------------------------
+  background: @t3-off-canvas-background;
+  color: @t3-off-canvas-text-color;
+
+  // Header
+  // -----------------------------------
+  .t3-off-canvas-header {
+    background: @t3-off-canvas-header-background;
+    color: @t3-off-canvas-header-text-color;
+    padding: 0 0 0 @padding-base-horizontal;
+    height: @t3-global-padding * 2;
+
+    // Title
+    h2 {
+      margin: 0;
+      line-height: @t3-global-padding * 2;
+      font-size: @font-size-h6;
+      text-transform: uppercase;
+      color: @t3-off-canvas-header-text-color;
+      letter-spacing: 1px;
+    }
+
+  }
+
+  // Close Button
+  .close {
+    color: @white;
+    margin: 0;
+    height: @t3-global-padding * 2;
+    line-height: @t3-global-padding * 2;
+    font-weight: 300;
+    width: @t3-global-padding * 2;
+    background: darken(@t3-off-canvas-header-background, 2%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    .opacity(1);
+  }
+
+
+  // Body
+  // -----------------------------------
+  .t3-off-canvas-body {
+    font-size: @font-size-h6;
+    padding: (@padding-base-vertical * 2)  @padding-base-horizontal;
+
+    // Links
+    // ------------
+    a {
+      color: @t3-off-canvas-link-color;
+      font-size: @font-size-h6;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: @t3-off-canvas-link-hover-color;
+        text-decoration: none;
+      }
+
+      &:focus {
+        .tab-focus();
+      }
+    }
+
+    .dropdown-menu .active > a {
+      background: transparent;
+      color: @t3-off-canvas-link-hover-color;
+    }
+
+
+    // Navigations
+    // ------------
+    .nav {
+      > li {
+        margin: 0;
+
+        > a,
+        > span {
+          border: 0;
+          display: block;
+          padding: 8px 0;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: @font-size-base;
+
+          &:hover, &:active, &:focus {
+            background: transparent;
+
+            &:before {
+              margin-right: 8px;
+              transition: 0.2s;
+            }
+          }
+
+          .caret {
+            display: none;
+          }
+        }
+
+        &.dropdown {
+          > a,
+          > span {
+            &:before {
+              content: "\f0da";
+              font-family: "FontAwesome";
+              margin-right: 5px;
+              transition: 0.2s;
+              font-weight: @font-weight-normal;
+              font-size: @font-size-h6;
+              float: right;
+            }
+          }
+        }
+
+        &.active {
+          > a,
+          > span {
+            background: transparent;
+            border: 0;
+            color: @t3-off-canvas-link-hover-color;
+          }
+        }
+      }
+    }
+
+    // Dropdown Menu
+    .dropdown-menu {
+      background: transparent;
+      padding-left: @t3-global-padding/2;
+
+      > li {
+        margin: 0;
+
+        > a,
+        > span {
+          font-size: @font-size-small;
+          font-weight: @font-weight-normal;
+          padding: 8px 0;
+          text-transform: none;
+          display: block;
+
+          &:hover, &:active, &:focus {
+            background: transparent;
+
+            &:before {
+              margin-right: 8px;
+              transition: 0.2s;
+            }
+          }
+        }
+      }
+    }
+
+
+    // Modules
+    // ------------
+    .t3-module {
+      margin-bottom: @grid-gutter-width;
+      color: @t3-off-canvas-text-color;
+
+      .module-inner {
+        background: none;
+        padding: 0;
+      }
+    }
+
+    .module-title  {
+      background: @white;
+      color: @brand-primary;
+      margin: 0 0 @t3-global-margin/2;
+      padding: 0 0 @t3-global-padding/2 0;
+      position: relative;
+      font-size: @font-size-small;
+      font-weight: 700;
+    }
+
+  // End Off-Canvas Body
+  }
+
+// End Off-Canvas Content Styles
+}
+

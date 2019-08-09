@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_phocafavicon/models/fields">
+		<field name="template" type="PhocaTemplates"  label="COM_PHOCAFAVICON_FIELD_TEMPLATE_LABEL" required="true" description="COM_PHOCAFAVICON_FIELD_TEMPLATE_DESC" class="inputbox"  
+		>
+			<option>COM_PHOCAFAVICON_SELECT_TEMPLATE</option>
+		</field>
+		
+		
+		<field name="filename" type="phocaselectfilename"  label="COM_PHOCAFAVICON_FIELD_FILENAME_LABEL" required="true" description="COM_PHOCAFAVICON_FIELD_FILENAME_DESC" class="inputbox" size="40" />
+	</fieldset>
+</form>

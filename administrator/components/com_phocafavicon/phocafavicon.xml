@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="component" version="3">
+	<name>com_phocafavicon</name>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<creationDate>18/08/2016</creationDate>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>3.0.1</version>
+	<description>Phoca Favicon</description>
+	<scriptfile>install/script.php</scriptfile>
+
+	<update>
+		<schemas/>
+	</update>
+
+	<files folder="site">
+		<filename>index.html</filename>
+	</files>
+
+	<media destination="com_phocafavicon" folder="media">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+	</media>
+
+	<languages>
+		<language tag="en-GB" client="site">language/en-GB/en-GB.com_phocafavicon.ini</language>
+		<language tag="en-GB" client="site">language/en-GB/en-GB.com_phocafavicon.sys.ini</language>
+	</languages>
+
+	<administration>
+		<menu img="media/com_phocafavicon/images/administrator/icon-16-pf-menu.png" link="option=com_phocafavicon">COM_PHOCAFAVICON</menu>
+		<submenu>
+			<menu img="media/com_phocafavicon/images/administrator/icon-16-pf-control-panel.png" alt="COM_PHOCAFAVICON_CONTROLPANEL" view="phocafaviconcp" link="option=com_phocafavicon">COM_PHOCAFAVICON_CONTROLPANEL</menu>
+			<menu img="media/com_phocafavicon/images/administrator/icon-16-pf-menu-favicon.png" alt="COM_PHOCAFAVICON_CREATE_FAVICON" view="phocafavicon" link="option=com_phocafavicon&amp;view=phocafavicon">COM_PHOCAFAVICON_CREATE_FAVICON</menu>
+			<menu img="media/com_phocafavicon/images/administrator/icon-16-pf-menu-info.png" alt="COM_PHOCAFAVICON_INFO" view="phocafaviconin" link="option=com_phocafavicon&amp;view=phocafaviconin">COM_PHOCAFAVICON_INFO</menu>
+		</submenu>
+
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>phocafavicon.php</filename>
+			<filename>phocafavicon.xml</filename>
+			<folder>controllers</folder>
+			<folder>help</folder>
+			<folder>helpers</folder>
+			<folder>install</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.com_phocafavicon.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_phocafavicon.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>

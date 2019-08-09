@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JEFAQPRO_VIEW_FAQ_CATEGORIZEDLAYOUT_TITLE" option="COM_FAQPRO_VIEW_FAQ_CATEGORIZEDLAYOUT_OPTION">
+		<message>
+			<![CDATA[COM_JEFAQPRO_VIEW_FAQ_CATEGORIZEDLAYOUT_DESC]]>
+		</message>
+	</layout>
+
+	<fields name="params">
+		<fieldset name="basic" label="COM_JEFAQPRO_THEME_OPTIONS" addfieldpath="/administrator/components/com_jefaqpro/models/fields">
+			<field
+				type="themesmenu"
+				name="theme"
+				onchange="selectTheme(this.value)"
+				label="COM_JEFAQPRO_FIELD_THEME_LABEL"
+				description="COM_JEFAQPRO_FIELD_THEME_DESC"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,66 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Youjoomla.com 
+|| # ---------------------------------------------------------------- # ||
+|| # Copyright ©2006-2009 Youjoomla.com. All Rights Reserved.           ||
+|| # This file may not be redistributed in whole or significant part. # ||
+|| # ---------------- THIS IS NOT FREE SOFTWARE ---------------- #      ||
+|| # http://www.youjoomla.com | http://www.youjoomla.com/license.html # ||
+|| #################################################################### ||
+\*======================================================================*/
+/* module holder */
+#titles_holder{
+overflow:hidden;
+float:left;
+text-align:center;
+background:#000;
+}
+/* Title */
+#title_title{
+font-weight:bold;
+float:left;
+color:#fff;
+font-size:14px;
+}
+/* slider */
+#yj_nt2{
+overflow:hidden;
+float:left; 
+text-align:left;
+
+}
+/* links holder */
+#yj_nt2 div div{
+background:#000;
+}
+/* links only */
+#yj_nt2 a {
+color:#fff;
+text-decoration:none;
+}
+#yj_nt2 a:hover {
+color:#ccc;
+text-decoration:none;
+}
+/* navigation */
+.title_nav{
+float:left;
+width:20px;
+display:block;
+}
+.title_nav a.prev{
+display:block;
+float:left;
+width:7px;
+padding:0 3px 0 0;
+background: url(../images/prev.png) no-repeat left center;
+}
+.title_nav a.next{
+display:block;
+float:right;
+width:7px;
+background: url(../images/next.png) no-repeat left center;
+}
+.ttick{
+	overflow:hidden;
+}

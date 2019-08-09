@@ -1,0 +1,3 @@
+/* RTL Style here */
+.direction-rtl .ms-skin-modern .ms-bullets.ms-dir-h {right: 0px;}
+.direction-rtl .ms-bullet {cursor: pointer;float: right;}

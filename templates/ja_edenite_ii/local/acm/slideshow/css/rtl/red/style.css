@@ -1,0 +1,101 @@
+.acm-slideshow .owl-carousel {
+  cursor: move;
+  padding: 0;
+  overflow: hidden;
+  background: #333333;
+}
+.acm-slideshow .owl-carousel .transition(all 400ms) .owl-wrapper-outer {
+  z-index: 0;
+}
+.acm-slideshow .owl-carousel .owl-controls {
+  margin: 0;
+}
+.acm-slideshow .owl-carousel .owl-controls .owl-pagination {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+.acm-slideshow .owl-carousel .owl-controls .owl-pagination .owl-page span {
+  margin: 5px;
+  height: 9px;
+  width: 9px;
+}
+.acm-slideshow .owl-carousel .owl-controls .owl-pagination .owl-page.active span {
+  background: #2d2d2d;
+}
+.acm-slideshow .owl-carousel .owl-controls .owl-buttons > div {
+  border-radius: 0;
+  background: #2d2d2d;
+  position: absolute;
+  top: 50%;
+  line-height: 50px;
+  right: -50px;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  margin-top: -25px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+.acm-slideshow .owl-carousel .owl-controls .owl-buttons > div:hover,
+.acm-slideshow .owl-carousel .owl-controls .owl-buttons > div:focus,
+.acm-slideshow .owl-carousel .owl-controls .owl-buttons > div:active {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.acm-slideshow .owl-carousel .owl-controls .owl-buttons > div.owl-next {
+  left: -50px;
+  right: auto;
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  .acm-slideshow .owl-carousel .owl-controls .owl-buttons {
+    display: none;
+  }
+}
+.acm-slideshow .owl-carousel:hover .owl-buttons > div {
+  right: 0;
+}
+.acm-slideshow .owl-carousel:hover .owl-buttons > div.owl-next {
+  left: 0;
+}
+.acm-slideshow .owl-carousel .item .img-bg {
+  width: 100%;
+}
+.acm-slideshow .owl-carousel .item .item-info {
+  background: linear-gradient(transparent, #000000);
+  bottom: 0;
+  color: #ffffff;
+  padding: 30px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+.acm-slideshow .owl-carousel .item .item-info > span {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+}
+.acm-slideshow .owl-carousel .item .item-info h2 {
+  color: #ffffff;
+  margin-top: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .acm-slideshow .owl-carousel .item .item-info h2 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .acm-slideshow .owl-carousel .item .item-info > p {
+    font-size: 15px;
+  }
+}

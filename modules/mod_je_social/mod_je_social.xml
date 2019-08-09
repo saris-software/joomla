@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3" type="module" client="site" method="upgrade">
+	<name>JE Social Icons</name> 
+    <version>3.4</version>
+    <creationDate>February, 2015</creationDate>
+    <author>jExtensions.com</author>
+    <authorEmail>support@jExtensions.com</authorEmail>
+    <authorUrl>http://jExtensions.com</authorUrl>
+    <copyright>Copyright 2015 - jExtensions.com</copyright>
+    <license>GNU/GPL</license>
+	<description><![CDATA[
+	<h1 class="sub-heading">JE Social Icons</h1>	
+	<div class="description">Download more free extensions from <a href="http://jextensions.com/" target="_blank">jExtensions.com</a><br/>
+	Need help? <a href="http://jextensions.com/social-icons-module" target="_blank">Click here to visit the support page</a>.<br/>
+	</div>
+		]]>
+	</description>
+
+	<files>
+		<filename module="mod_je_social">mod_je_social.php</filename>
+		<filename>index.html</filename>
+		<folder>images/</folder>
+		<folder>css/</folder>	
+		<folder>php/</folder>	
+	</files>
+
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_je_social/php">
+			<fieldset name="basic">
+				<field name="iconStyle" type="list" default="0" label="Icon Styles" description="Choose the style of the icons.">
+					<option value="0">Square</option>
+					<option value="1">Rounded</option>
+					<option value="2">Circle</option>
+				</field>		
+					<field name="Icon1" type="icons" default="" label="" description="" />
+					<field name="Icon2" type="icons" default="" label="" description="" />
+					<field name="Icon3" type="icons" default="" label="" description="" />
+					<field name="Icon4" type="icons" default="" label="" description="" />
+					<field name="Icon5" type="icons" default="" label="" description="" />
+					<field name="Icon6" type="icons" default="" label="" description="" />
+					<field name="Icon7" type="icons" default="" label="" description="" />
+					<field name="Icon8" type="icons" default="" label="" description="" />
+					<field name="Icon9" type="icons" default="" label="" description="" />
+					<field name="Icon10" type="icons" default="" label="" description="" />
+					<field name="Icon11" type="icons" default="" label="" description="" />
+					<field name="Icon12" type="icons" default="" label="" description="" />
+					<field name="Icon13" type="icons" default="" label="" description="" />
+					<field name="Icon14" type="icons" default="" label="" description="" />
+					<field name="Icon15" type="icons" default="" label="" description="" />
+					<field name="Icon16" type="icons" default="" label="" description="" />
+					<field name="Icon17" type="icons" default="" label="" description="" />
+			<field type="asset" />
+			</fieldset>		
+			
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="Module Class Suffix"/>
+				
+				<field	name="cache" type="list" default="1" label="Caching" >
+					<option value="1">Use Global</option>
+					<option value="0">No Caching</option>
+				</field>
+				
+				<field	name="cache_time" type="text" default="900" label="Cache Time" />
+				
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

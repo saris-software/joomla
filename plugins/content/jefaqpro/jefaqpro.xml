@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>plg_content_jefaqpro</name>
+	<author>J-Extension</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>[2012] J-Extn</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>contact@jextn.com</authorEmail>
+	<authorUrl>http://www.jextn.com</authorUrl>
+	<version>1.0</version>
+	<description>JEFAQPRO_DESCRIPTION</description>
+	<files>
+		<filename plugin="jefaqpro">jefaqpro.php</filename>
+		<folder>jefaqpro</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_jefaqpro.ini</language>
+		<language tag="en-GB">en-GB.plg_content_jefaqpro.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="sort" type="list" default="ordering" label="PARAMSORTBY" description="PARAMSORTBYDES">
+					<option value="ordering">PARAMSORTORDER</option>
+					<option value="id">PARAMSORTID</option>		
+					<option value="random">PARAMSORTRANDOM</option>					
+				</field>
+				<field name="order" type="list" default="desc" label="PARAMORDER" description="PARAMORDERDES">
+					<option value="asc">ASCENDING</option>
+					<option value="desc">DESCENDING</option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

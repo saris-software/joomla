@@ -1,0 +1,15 @@
+.rsepro_events_module {
+	list-style: none outside none !important;
+    padding: 0 !important;
+    margin: 0;
+}
+
+.rsepro_events_module li {
+	clear: both;
+	padding: 2px;
+}
+
+.rsepro_events_module li .rsepro-image {
+	float: left;
+	margin-right: 5px;
+}

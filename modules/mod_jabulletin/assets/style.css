@@ -1,0 +1,45 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Bulletin Module for J3.x
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2018 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+ */
+#ja-bulletin {
+	position: relative;
+}
+
+#ja-bulletin ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#ja-bulletin ul li {
+	margin: 0;
+	padding: 8px 0;
+	border-bottom: 1px solid #E6E6E6;
+	background: none;
+	position: relative;
+	width: 100%;
+	line-height: normal;
+}
+
+#ja-bulletin ul img {
+	position: absolute;
+	left: 0;
+	top: 8px;
+}
+
+#ja-bulletin ul div {
+	line-height: 1.2;
+	display: block;
+}
+
+#ja-bulletin ul span {
+	font-size: 85%;
+	color: #999999;
+}

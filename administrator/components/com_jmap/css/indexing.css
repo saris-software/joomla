@@ -1,0 +1,100 @@
+/* Google indexing styles */
+
+span.label.label-icon span.badge.pull-right {
+	float: none !important;
+}
+
+span.input-expanded {
+	max-width: 500px;
+	margin: 0;
+}
+
+span.badge.active.white {
+	background-color: #FFF;
+	color: #428bca;
+	margin-left: 10px;
+}
+
+table.full.headerlist td select {
+	padding: 2px;
+	min-height: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float: right;
+}
+
+table.selectinput tr td span.input-expanded {
+	margin-bottom: 10px;
+}
+
+table.headerlist.selectinput td select {
+	border-radius: 0 3px 3px 0 !important;
+	height: 28px!important;
+	min-height: 0;
+	margin-bottom: 0;
+}
+
+h3.googletitle {
+	color: #1a0dab;
+	font-weight: normal;
+}
+
+a.googlelink {
+	color: #006621;
+	max-width: 600px;
+	display: block;
+	word-wrap: break-word;
+}
+
+img.googlelogo {
+	position: absolute;
+	right: 50px;
+}
+
+#search {
+	width: 250px;
+}
+
+span[data-role=keywords_suggestion] {
+	line-height: 0;
+	position: absolute;
+}
+
+label[data-role=keywords_suggestion] {
+	top: 3px;
+    left: 5px;
+	cursor: pointer;
+}
+
+div.popover.keywords_suggestion {
+	min-width: 64px;
+	max-width: 340px;
+	min-height: 54px;
+	max-height: 480px;
+}
+
+div.popover.keywords_suggestion div.popover-content {
+	max-height: 460px;
+    overflow-y: auto;
+	line-height: normal;
+}
+
+ul.keywords_results {
+	margin: 0;
+	padding: 0;
+	width: 300px;
+}
+
+ul.keywords_results li {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 4px;
+    padding: 4px;
+    float: left;
+    border-radius: 2px;
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border: 1px solid #6687AD;
+	list-style-type: none;
+}

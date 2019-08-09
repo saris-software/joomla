@@ -1,0 +1,28 @@
+.mod_slider_control {
+	color: #5269FF !important;
+	background: #BABABA;
+}
+.mod_slider_control:hover,
+.mod_slider_control:focus {
+	color: #2E4AFF !important;
+	background: #BABABA !important;
+}
+.mod_slider_caption {
+	background: #CCCCCC;
+}
+
+.mod_slider_caption h3,
+.mod_slider_caption p {
+	color: #4D4D4D;
+}
+
+.mod_slider_caption h3 a {
+	color: #5269FF;
+	text-decoration:none;
+}
+
+.mod_slider_caption h3 a:hover,
+.mod_slider_caption h3 a:focus {
+	color: #2E4AFF;
+	background: none;
+}

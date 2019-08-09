@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+	<name>MOD_RSEVENTSPRO_CALENDAR</name>
+	<creationDate>19/03/2012</creationDate>
+	<author>www.rsjoomla.com</author>
+	<copyright>GNU General Public License</copyright>
+	<authorEmail>suport@rsjoomla.com</authorEmail>
+	<authorUrl>http://www.rsjoomla.com</authorUrl>
+	<version>1.7</version>
+	<description>MOD_RSEVENTSPRO_CALENDAR_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	
+	<updateservers>
+        <server type="extension" priority="1" name="RSEvents! Pro - Calendar Module">https://www.rsjoomla.com/updates/com_rseventspro/Modules/mod_rseventspro_calendar.xml</server>
+    </updateservers>
+
+	<files>
+		<filename module="mod_rseventspro_calendar">mod_rseventspro_calendar.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<media destination="mod_rseventspro_calendar" folder="media">
+		<folder>css</folder>
+		<filename>index.html</filename>
+	</media>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rseventspro_calendar.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rseventspro_calendar.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_rseventspro/models/fields">				
+				<field name="startmonth" type="list" default="0" label="MOD_RSEVENTSPRO_CALENDAR_START_MONTH" description="MOD_RSEVENTSPRO_CALENDAR_START_MONTH_DESC">
+					<option value="0">MOD_RSEVENTSPRO_CALENDAR_CURRENT_MONTH</option>
+					<option value="1">JANUARY</option>
+					<option value="2">FEBRUARY</option>
+					<option value="3">MARCH</option>
+					<option value="4">APRIL</option>
+					<option value="5">MAY</option>
+					<option value="6">JUNE</option>
+					<option value="7">JULY</option>
+					<option value="8">AUGUST</option>
+					<option value="9">SEPTEMBER</option>
+					<option value="10">OCTOBER</option>
+					<option value="11">NOVEMBER</option>
+					<option value="12">DECEMBER</option>
+				</field>
+				
+				<field name="startyear" type="text" default="" label="MOD_RSEVENTSPRO_CALENDAR_START_YEAR" class="input-small" size="5" description="MOD_RSEVENTSPRO_CALENDAR_START_YEAR_DESC" filter="integer" />
+				
+				<field name="ordering" type="list" default="start" label="MOD_RSEVENTSPRO_CALENDAR_ORDERING" description="MOD_RSEVENTSPRO_CALENDAR_ORDERING_DESC">
+					<option value="name">MOD_RSEVENTSPRO_CALENDAR_NAME_ORDERING</option>
+					<option value="start">MOD_RSEVENTSPRO_CALENDAR_STARTDATE_ORDERING</option>
+				</field>
+				
+				<field name="order" type="list" default="DESC" label="MOD_RSEVENTSPRO_CALENDAR_ORDERING_DIRECTION" description="MOD_RSEVENTSPRO_CALENDAR_ORDERING_DIRECTION_DESC">
+					<option value="DESC">MOD_RSEVENTSPRO_CALENDAR_DESCENDING</option>
+					<option value="ASC">MOD_RSEVENTSPRO_CALENDAR_ASCENDING</option>
+				</field>
+				
+				<field name="nofollow" type="list" default="0" label="MOD_RSEVENTSPRO_CALENDAR_ENABLE_NO_FOLLOW" description="MOD_RSEVENTSPRO_CALENDAR_ENABLE_NO_FOLLOW_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="startday" type="list" default="1" label="MOD_RSEVENTSPRO_CALENDAR_STARTDAY" description="MOD_RSEVENTSPRO_CALENDAR_STARTDAY_DESC">
+					<option value="6">MOD_RSEVENTSPRO_CALENDAR_STARTDAY_SATURDAY</option>
+					<option value="0">MOD_RSEVENTSPRO_CALENDAR_STARTDAY_SUNDAY</option>
+					<option value="1">MOD_RSEVENTSPRO_CALENDAR_STARTDAY_MONDAY</option>
+				</field>
+				
+				<field name="full" type="list" default="1" label="MOD_RSEVENTSPRO_CALENDAR_FULL" description="MOD_RSEVENTSPRO_CALENDAR_FULL_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="list" type="rslist" default="all" label="MOD_RSEVENTSPRO_CALENDAR_TYPE" description="MOD_RSEVENTSPRO_CALENDAR_TYPE_DESC" onchange="rsepro_change_list(this.value);">
+					<option value="ongoing">MOD_RSEVENTSPRO_CALENDAR_TYPE_ONGOING</option>
+				</field>
+				
+				<field name="archived" type="list" default="0" label="MOD_RSEVENTSPRO_CALENDAR_LIST_EVENTS_ARCHIVED" description="MOD_RSEVENTSPRO_CALENDAR_LIST_EVENTS_ARCHIVED_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="days" type="text" default="0" label="MOD_RSEVENTSPRO_CALENDAR_EVENTS_FUTURE_DAYS" size="4" description="MOD_RSEVENTSPRO_CALENDAR_EVENTS_FUTURE_DAYS_DESC" />
+				
+				<field name="display" type="list" default="0" label="MOD_RSEVENTSPRO_CALENDAR_DISPLAY" description="MOD_RSEVENTSPRO_CALENDAR_DISPLAY_DESC">
+					<option value="0">MOD_RSEVENTSPRO_CALENDAR_DISPLAY_ALLDAYS</option>
+					<option value="1">MOD_RSEVENTSPRO_CALENDAR_DISPLAY_STARTDAY</option>
+					<option value="2">MOD_RSEVENTSPRO_CALENDAR_DISPLAY_STARTENDDAY</option>
+				</field>
+				
+				<field name="itemid" type="text" default="" label="MOD_RSEVENTSPRO_CALENDAR_CUSTOM_ITEMID" description="MOD_RSEVENTSPRO_CALENDAR_CUSTOM_ITEMID" />
+				
+				<field name="categories" type="category" extension="com_rseventspro" default="" label="MOD_RSEVENTSPRO_CALENDAR_EVENTS_CATEGORIES" description="MOD_RSEVENTSPRO_CALENDAR_EVENTS_CATEGORIES_DESC"  multiple="multiple" class="rs200 rschosen" />
+				<field name="locations" type="rslocations" default="" label="MOD_RSEVENTSPRO_CALENDAR_EVENTS_LOCATIONS" description="MOD_RSEVENTSPRO_CALENDAR_EVENTS_LOCATIONS_DESC" multiple="multiple" class="rs200 rschosen" show_root="false" />
+				<field name="tags" type="rstags" default="" label="MOD_RSEVENTSPRO_CALENDAR_EVENTS_TAGS" description="MOD_RSEVENTSPRO_CALENDAR_EVENTS_TAGS_DESC" multiple="multiple" class="rs200 rschosen" />
+				<field name="choosen" type="rschosen" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_RSEVENTSPRO_CALENDAR_CLASS_SUFFIX" description="MOD_RSEVENTSPRO_CALENDAR_CLASS_SUFFIX_DESC" />
+				<field name="use_cache" type="list" default="1" label="MOD_RSEVENTSPRO_CALENDAR_USE_CACHE" description="MOD_RSEVENTSPRO_CALENDAR_USE_CACHE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

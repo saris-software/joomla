@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>MOD_VISITORCOUNTER</name>
+    <version>3.3.0</version>
+    <creationDate>2018-05-22</creationDate>
+    <license>http://www.gnu.org/licenses/gpl</license>
+    <copyright>Copyright 2018 Viktor Vogel. All rights reserved.</copyright>
+    <author>Viktor Vogel</author>
+    <authorEmail>admin@kubik-rubik.de</authorEmail>
+    <authorUrl>https://joomla-extensions.kubik-rubik.de/</authorUrl>
+    <description>MOD_VISITORCOUNTER_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_visitorcounter">mod_visitorcounter.php</filename>
+        <filename module="mod_visitorcounter">mod_visitorcounter.css</filename>
+        <filename module="mod_visitorcounter">helper.php</filename>
+        <filename module="mod_visitorcounter">index.html</filename>
+        <filename module="mod_visitorcounter">tmpl/default.php</filename>
+        <filename module="mod_visitorcounter">tmpl/index.html</filename>
+        <folder module="mod_visitorcounter">fields</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_visitorcounter.sys.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_visitorcounter.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_visitorcounter.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_visitorcounter.ini</language>
+    </languages>
+    <updateservers>
+        <server type="extension" priority="1" name="MOD_VISITORCOUNTER">https://check.kubik-rubik.de/updates/mod_visitorcounter.xml</server>
+    </updateservers>
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_visitorcounter/fields">
+            <fieldset name="settings">
+                <field type="krdonationcodecheck"/>
+                <field type="krtitle" name="spacer_output" label="MOD_VISITORCOUNTER_SPACER_OUTPUT"/>
+                <field name="s_today" type="list" default="1" label="MOD_VISITORCOUNTER_SHOWTODAY" description="MOD_VISITORCOUNTER_SHOWTODAYUSERS">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="today" type="text" default="" label="MOD_VISITORCOUNTER_TODAYOPT" description="MOD_VISITORCOUNTER_TODAY_DESC"/>
+                <field name="s_yesterday" type="list" default="1" label="MOD_VISITORCOUNTER_SHOWYESTERDAY" description="MOD_VISITORCOUNTER_SHOWYESTERDAYUSERS">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="yesterday" type="text" default="" label="MOD_VISITORCOUNTER_YESTERDAYOPT" description="MOD_VISITORCOUNTER_YESTERDAY_DESC"/>
+                <field name="s_week" type="list" default="1" label="MOD_VISITORCOUNTER_SHOWWEEK" description="MOD_VISITORCOUNTER_SHOWWEEKUSERS">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="week" type="text" default="" label="MOD_VISITORCOUNTER_WEEKOPT" description="MOD_VISITORCOUNTER_WEEK_DESC"/>
+                <field name="s_month" type="list" default="1" label="MOD_VISITORCOUNTER_SHOWMONTH" description="MOD_VISITORCOUNTER_SHOWMONTHUSERS">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="month" type="text" default="" label="MOD_VISITORCOUNTER_MONTHOPT" description="MOD_VISITORCOUNTER_MONTH_DESC"/>
+                <field name="s_all" type="list" default="1" label="MOD_VISITORCOUNTER_SHOWALL" description="MOD_VISITORCOUNTER_SHOWALLUSERS">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="all" type="text" default="" label="MOD_VISITORCOUNTER_ALLOPT" description="MOD_VISITORCOUNTER_ALL_DESC"/>
+                <field name="horizontal" type="list" default="0" label="MOD_VISITORCOUNTER_HORIZONTAL" description="MOD_VISITORCOUNTER_HORIZONTAL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                    <option value="2">MOD_VISITORCOUNTER_YESCOMPACT</option>
+                </field>
+                <field name="hor_text" type="text" default="" label="MOD_VISITORCOUNTER_HORTEXT" description="MOD_VISITORCOUNTER_HORTEXT_DESC"/>
+                <field name="separator" type="text" default="" label="MOD_VISITORCOUNTER_SEPARATOR" description="MOD_VISITORCOUNTER_SEPARATOR_DESC"/>
+                <field type="krtitle" name="spacer_countersettings" label="MOD_VISITORCOUNTER_SPACER_COUNTERSETTINGS"/>
+                <field name="locktime" type="text" default="1440" label="MOD_VISITORCOUNTER_LOCKTIME" description="MOD_VISITORCOUNTER_LOCKTIME_DESC"/>
+                <field name="preset" type="text" default="0" label="MOD_VISITORCOUNTER_PRESETCOUNTER" description="MOD_VISITORCOUNTER_PRESETCOUNTER_DESC"/>
+                <field type="krtitle" name="spacer_whoisonline" label="MOD_VISITORCOUNTER_SPACER_WHOISONLINE"/>
+                <field name="whoisonline" type="list" default="1" label="MOD_VISITORCOUNTER_WHOISONLINE" description="MOD_VISITORCOUNTER_WHOISONLINE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="2">JYESNAMES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="whoisonline_linknames" type="list" default="0" label="MOD_VISITORCOUNTER_WHOISONLINELINKNAMES" description="MOD_VISITORCOUNTER_WHOISONLINELINKNAMES_DESC">
+                    <option value="1">JYES</option>
+                    <option value="2">MOD_VISITORCOUNTER_COMMUNITY_BUILDER</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="whoisonline_session" type="text" default="10" label="MOD_VISITORCOUNTER_WHOISONLINESESSION" description="MOD_VISITORCOUNTER_WHOISONLINESESSION_DESC"/>
+                <field type="krtitle" name="spacer_permissionexclusion" label="MOD_VISITORCOUNTER_SPACER_PERMISSIONEXCLUSION"/>
+                <field name="filter_groups" type="usergroup" default="1" multiple="true" size="10" label="MOD_VISITORCOUNTER_SHOWALLOWEDGROUPS" description="MOD_VISITORCOUNTER_SHOWALLOWEDGROUPS_DESC"/>
+                <field name="nobots" type="list" default="1" label="MOD_VISITORCOUNTER_NOBOTS" description="MOD_VISITORCOUNTER_NOBOTS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="botslist" type="text" size="100" default="bot,spider,crawler,libwww,search,archive,slurp,teoma,facebook,twitter" label="MOD_VISITORCOUNTER_BOTSLIST" description="MOD_VISITORCOUNTER_BOTSLIST_DESC"/>
+                <field name="noip" type="list" default="0" label="MOD_VISITORCOUNTER_NOIPS" description="MOD_VISITORCOUNTER_NOIPS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="ipslist" type="textarea" default="" rows="10" cols="5" filter="raw" label="MOD_VISITORCOUNTER_IPSLIST" description="MOD_VISITORCOUNTER_IPSLIST_DESC"/>
+                <field type="krtitle" name="spacer_expertsettings" label="MOD_VISITORCOUNTER_SPACER_EXPERTSETTINGS"/>
+                <field name="anonymize_ip" type="list" default="2" label="MOD_VISITORCOUNTER_ANONYMIZEIP" description="MOD_VISITORCOUNTER_ANONYMIZEIP_DESC">
+                    <option value="2">MOD_VISITORCOUNTER_ANONYMIZEIP_HASH</option>
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="clean_db" type="list" default="1" label="MOD_VISITORCOUNTER_AUTOMATICCLEANUP" description="MOD_VISITORCOUNTER_AUTOMATICCLEANUP_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="sql" type="list" default="1" label="MOD_VISITORCOUNTER_SQL" description="MOD_VISITORCOUNTER_SQL_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field type="krtitle" showon="linktoproject:0" filter="donation" name="spacer_donate" label="KR_DONATION_CODE_CHECK_SPACER_DONATE"/>
+                <field name="linktoproject" type="list" default="1" label="MOD_VISITORCOUNTER_POWEREDBY" description="MOD_VISITORCOUNTER_POWEREDBY_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field type="krdonationcodecheck"/>
+                <field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME__DESC"/>
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+            </fieldset>
+            <fieldset name="donation">
+                <field type="krdonationcodecheck" name="donation"/>
+                <field name="donation_code" type="text" default="" size="40" label="KR_DONATION_CODE" description="KR_DONATION_CODE_DESC"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

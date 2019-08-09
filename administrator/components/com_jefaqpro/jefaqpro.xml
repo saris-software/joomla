@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2" method="upgrade">
+	<name>JEFAQPro</name>
+	<license>GNU General Public License v2, see LICENSE.php</license>
+	<author>JExtension</author>
+	<copyright>[2012] - JExtn</copyright>
+	<creationDate>January 31, 2012</creationDate>
+	<authorEmail>contact@jextn.com</authorEmail>
+	<authorUrl>http://www.jextn.com</authorUrl>
+	<version>4.0.0</version>
+	<description>
+	</description>
+	
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>jefaqpro.php</filename>
+		<filename>router.php</filename>
+		
+		<folder>assets</folder>
+		<folder>captcha</folder>
+		<folder>controllers</folder>
+		<folder>copyright</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		<folder>jefaqpro</folder>
+		<folder>plg_jeFaqpro</folder>
+	</files>
+	
+	<languages folder="site">
+		<language tag="en-GB">en-GB.com_jefaqpro.ini</language>
+		<language tag="en-GB">en-GB.com_jefaqpro.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_search_jefaqpro.ini</language>
+	</languages>
+	
+	<administration>
+		<menu link="option=com_jefaqpro" img="components/com_jefaqpro/assets/images/icons/small_icon_faq.png">COM_JEFAQPRO_MAINMENU</menu>
+		<submenu>
+			<menu link="option=com_jefaqpro&amp;view=faqs" view="faqs" img="components/com_jefaqpro/assets/images/icons/faq.png">COM_JEFAQPRO_SUBMENUFAQ</menu>
+			<menu link="option=com_categories&amp;extension=com_jefaqpro" view="categories" img="components/com_jefaqpro/assets/images/icons/category_image.png">COM_JEFAQPRO_SUBMENUCATEGORY</menu>
+			<menu link="option=com_jefaqpro&amp;task=settings.edit&amp;id=1" view="settings" img="components/com_jefaqpro/assets/images/icons/settings.png">COM_JEFAQPRO_SUBMENUSETTINGS</menu>
+			<menu link="option=com_jefaqpro&amp;view=import" view="import" img="components/com_jefaqpro/assets/images/icons/faq.png">COM_JEFAQPRO_SUBMENUIMPORT</menu>
+			<menu link="option=com_jefaqpro&amp;view=importcsv" view="importcsv" img="components/com_jefaqpro/assets/images/icons/faq.png">COM_JEFAQPRO_SUBMENUIMPORTCSV</menu>
+			<menu link="option=com_jefaqpro&amp;view=exportcsv" view="exportcsv" img="components/com_jefaqpro/assets/images/icons/faq.png">COM_JEFAQPRO_SUBMENUEXPORTCSV</menu>
+		</submenu>
+		 
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>jefaqpro.php</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>install.mysql.sql</filename>
+			<filename>uninstall.mysql.sql</filename>
+			
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>copyright</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		
+		<languages folder="admin">
+			<language tag="en-GB">en-GB.com_jefaqpro.ini</language>
+			<language tag="en-GB">en-GB.com_jefaqpro.sys.ini</language>
+		</languages>
+	</administration>
+	<scriptfile>script.jefaqpro.php</scriptfile>
+	
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.mysql.sql</file>
+		</sql>
+	</install>
+	
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+</extension>
