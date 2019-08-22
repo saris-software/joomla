@@ -1,23 +1,61 @@
-element {
+.t3-megamenu.animate .mega > .mega-dropdown-menu {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0;
 }
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.t3-megamenu .mega > .mega-dropdown-menu {
+    min-width: 200px;
+    display: none;
 }
-body {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+.navbar-nav > li > .dropdown-menu {
+    margin-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.t3-megamenu .mega-dropdown-menu {
+    padding: 10px;
+}
+.navbar-nav .dropdown-menu {
+    padding: 10px;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+        margin-top: 2px;
+    list-style: none;
     font-size: 14px;
-    line-height: 1.42857143;
-    color: black;
-    background-color: white;
-}
-body {
-    margin: 0;
+    text-align: left;
+    background-color: #276b9f;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
 }
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+.nav {
+    list-style: none;
+}
+body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
 }
 html {
     font-size: 10px;
