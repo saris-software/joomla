@@ -1,0 +1,42 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Slideshow Module for Joomla 2.5 & 3.x
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2018 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+ */
+
+fieldset.adminform #jat3-profile-params {
+	border-collapse: collapse;
+}
+
+#jat3-profile-params table.paramlist tr.level3.disabled {
+	border: none;
+}
+
+#ja-profile-actions-core,
+#ja-profile-actions-local{
+	display: none;
+}
+
+.ja-profile{
+	position: relative; 
+	width: 60%;
+	float: left;
+}
+.profile_action{
+	position: inherit;
+	right: 5px;
+	top: 5px;
+}
+span.clone{
+	background: url("images/copy.png") no-repeat left top;
+	padding-left: 17px;
+}
+span.delete{
+	background: url("images/del2.gif") no-repeat left top;
+	padding-left: 17px;
+}

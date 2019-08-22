@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+	<name>MOD_RSEVENTSPRO_EVENTS</name>
+	<creationDate>June 2015</creationDate>
+	<author>www.rsjoomla.com</author>
+	<copyright>GNU General Public License</copyright>
+	<authorEmail>suport@rsjoomla.com</authorEmail>
+	<authorUrl>http://www.rsjoomla.com</authorUrl>
+	<version>1.4</version>
+	<description>MOD_RSEVENTSPRO_EVENTS_DESCRIPTION</description>
+	
+	<updateservers>
+        <server type="extension" priority="1" name="RSEvents! Pro - Events Module">https://www.rsjoomla.com/updates/com_rseventspro/Modules/mod_rseventspro_events.xml</server>
+    </updateservers>
+
+	<files>
+		<filename module="mod_rseventspro_events">mod_rseventspro_events.php</filename>
+		<folder>fields</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<media destination="mod_rseventspro_events" folder="media">
+		<folder>js</folder>
+		<folder>css</folder>
+		<filename>index.html</filename>
+	</media>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rseventspro_events.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rseventspro_events.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_rseventspro_events/fields">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_rseventspro/models/fields">
+				
+				<field name="ordering" type="list" default="start" label="MOD_RSEVENTSPRO_EVENTS_ORDERING" description="MOD_RSEVENTSPRO_EVENTS_ORDERING_DESC">
+					<option value="name">MOD_RSEVENTSPRO_EVENTS_NAME_ORDERING</option>
+					<option value="start">MOD_RSEVENTSPRO_EVENTS_STARTDATE_ORDERING</option>
+				</field>
+				
+				<field name="order" type="list" default="DESC" label="MOD_RSEVENTSPRO_EVENTS_ORDERING_DIRECTION" description="MOD_RSEVENTSPRO_EVENTS_ORDERING_DIRECTION_DESC">
+					<option value="DESC">MOD_RSEVENTSPRO_EVENTS_DESCENDING</option>
+					<option value="ASC">MOD_RSEVENTSPRO_EVENTS_ASCENDING</option>
+				</field>
+				
+				<field name="itemid" type="text" default="" label="MOD_RSEVENTSPRO_EVENTS_CUSTOM_ITEMID" description="MOD_RSEVENTSPRO_EVENTS_CUSTOM_ITEMID" />
+				<field name="limit" type="text" default="5" label="MOD_RSEVENTSPRO_EVENTS_LIMIT" description="MOD_RSEVENTSPRO_EVENTS_LIMIT_DESC" />
+				
+				<field name="links" type="list" default="0" label="MOD_RSEVENTSPRO_EVENTS_LINKS" description="MOD_RSEVENTSPRO_EVENTS_LINKS_DESC">
+					<option value="0">MOD_RSEVENTSPRO_EVENTS_LINKS_NEW</option>
+					<option value="1">MOD_RSEVENTSPRO_EVENTS_LINKS_CURRENT</option>
+				</field>
+				
+				<field name="type" type="list" default="start" label="MOD_RSEVENTSPRO_EVENTS_TYPE" description="MOD_RSEVENTSPRO_EVENTS_TYPE_DESC" onchange="rsepro_select_type();">
+					<option value="1">MOD_RSEVENTSPRO_EVENTS_TYPE_1</option>
+					<option value="2">MOD_RSEVENTSPRO_EVENTS_TYPE_2</option>
+					<option value="3">MOD_RSEVENTSPRO_EVENTS_TYPE_3</option>
+					<option value="4">MOD_RSEVENTSPRO_EVENTS_TYPE_4</option>
+					<option value="5">MOD_RSEVENTSPRO_EVENTS_TYPE_5</option>
+					<option value="6">MOD_RSEVENTSPRO_EVENTS_TYPE_6</option>
+					<option value="7">MOD_RSEVENTSPRO_EVENTS_TYPE_7</option>
+					<option value="8">MOD_RSEVENTSPRO_EVENTS_TYPE_8</option>
+					<option value="9">MOD_RSEVENTSPRO_EVENTS_TYPE_9</option>
+					<option value="10">MOD_RSEVENTSPRO_EVENTS_TYPE_10</option>
+					<option value="11">MOD_RSEVENTSPRO_EVENTS_TYPE_11</option>
+					<option value="12">MOD_RSEVENTSPRO_EVENTS_TYPE_12</option>
+				</field>
+				
+				<field name="from" type="rscalendar" default="" label="MOD_RSEVENTSPRO_EVENTS_FROM" description="MOD_RSEVENTSPRO_EVENTS_FROM_DESC" />
+				<field name="to" type="rscalendar" default="" label="MOD_RSEVENTSPRO_EVENTS_TO" description="MOD_RSEVENTSPRO_EVENTS_TO_DESC" filter="SERVER_UTC" />
+				
+				<field name="archived" type="list" label="MOD_RSEVENTSPRO_EVENTS_ARCHIVED" description="MOD_RSEVENTSPRO_EVENTS_ARCHIVED_DESC" default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="child" type="list" label="MOD_RSEVENTSPRO_EVENTS_CHILD" description="MOD_RSEVENTSPRO_EVENTS_CHILD_DESC" default="1">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="categories" type="category" extension="com_rseventspro" default="" label="MOD_RSEVENTSPRO_EVENTS_CATEGORIES" description="MOD_RSEVENTSPRO_EVENTS_CATEGORIES_DESC"  multiple="multiple" class="rs200 rschosen" />
+				<field name="locations" type="rslocations" default="" label="MOD_RSEVENTSPRO_EVENTS_LOCATIONS" description="MOD_RSEVENTSPRO_EVENTS_LOCATIONS_DESC" multiple="multiple" class="rs200 rschosen" show_root="false" />
+				<field name="tags" type="rstags" default="" label="MOD_RSEVENTSPRO_EVENTS_TAGS" description="MOD_RSEVENTSPRO_EVENTS_TAGS_DESC" multiple="multiple" class="rs200 rschosen" />
+				<field name="choosen" type="rschosen" />
+				<field name="scripts" type="scripts" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_RSEVENTSPRO_EVENTS_CLASS_SUFFIX" description="MOD_RSEVENTSPRO_EVENTS_CLASS_SUFFIX_DESC" />
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

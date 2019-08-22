@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style>
+	<info>
+		<name>bdt_simple_slider</name>
+		<author>BdThemes Ltd</author>
+		<desc>Master Slider: simple slider template.</desc>
+		<version>1.0</version>
+	</info>
+	<config>
+
+		<field type="select" name="skins_style" label="Skins Style" desc="The slide changing transition. As: basic,fade,mask,wave,flow,scale" default="default">			
+			<option value="default">Default</option>
+			<option value="black-1">Black 1</option>
+			<option value="black-2">Black 2</option>
+			<option value="contrast">Contrast</option>
+			<option value="light-2">Light 2</option>
+			<option value="light-4">Light 4</option>
+			<option value="light-5">Light 5</option>
+			<option value="light-6">Light 6</option>
+			<option value="metro">Metro</option>
+			<option value="modern">Modern</option>
+		</field>
+
+		<field type="text" name="image_width" label="Slider Width" desc="Slide image width in pixels" default="640" unit="px" />
+		<field type="text" name="image_height" label="Slider Height" desc="Slide image height in pixels" default="320" unit="px" />	
+		<field type="text" name="quality" label="Image Quality" desc="Quality of images (used in the JPG images) - percentage value between 0 and 100." default="95" unit="%" />
+
+		<field type="text" name="text_block_width" label="Content Block Width" default="50" desc="You can specify the text block width in percents" unit="px" />
+		<field type="text" name="text_block_position_top" label="Content Position Top" desc="Position of the text block from top" default="5" unit="px"  />
+		<field type="text" name="text_block_position_left" label="Content Position Left" desc="Position of the text block from left" default="5" unit="px" />
+		
+		<field type="switch" name="full_width" label="Forch Full Width" desc="You can enable slider size as a full width." default="1" class="gk_switch" />	
+		<field type="select" name="auto_height" label="Smooth Height" desc="Whether the slider adapts its height to each slide height or not. It overrides heightLimit option." default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+
+		<field type="select" name="smooth_height" label="Smooth Height" desc="Whether the slider uses smooth animation while its height changes." default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+
+		<field type="select" name="grab_cursor" label="Grab Cursor" desc="You can enable grab cursor when you hover on the slider." default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+		<field type="select" name="mouse_drag" label="Mouse Drag" desc="You can enable grab cursor when you hover on the slider." default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+		<field type="select" name="mouse_wheel" label="Mouse Wheel" desc="If you select enable and then wheel mouse on slider, so it will be sliding " default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+
+		<field type="text" name="animation_speed" label="Animation Speed" desc="Animation speed in miliseconds" default="17" class="gk_switch" unit="1 to 100" />
+
+		<field type="select" name="animation_loop" label="Animation Loop" desc="Enables the continuous sliding mode." default="true" >
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+		<field type="select" name="animation_autoplay" label="Auto Animation" desc="Autoanimation of the slides" default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+		<field type="text" name="slide_delay" label="Slide Delay" default="5" desc="You can set delay for your each slide as you need" unit="seconds" />
+
+		<field type="select" name="layout_view" label="Animation Transition" desc="The slide changing transition. As: basic,fade,mask,wave,flow,scale" default="basic">			
+			<option value="basic">Basic</option>
+			<option value="fade">Fade</option>
+			<option value="mask">Mask</option>
+			<option value="wave">Wave</option>
+			<option value="flow">Flow</option>
+			<option value="scale">Scale</option>
+		</field>
+		
+		<field type="switch" name="circletimer" label="Circle Timer" desc="If you select enable then show circle timer on the slider." default="1" class="gk_switch" />
+		<field type="switch" name="pagination" label="Pagination" desc="here we've added bulet control to the slider." default="1" class="gk_switch" />
+		<field type="switch" name="navigation" label="Navigation" desc="here we've added arrow control to the slider." default="1" class="gk_switch" />
+
+		<field type="textarea" name="content_style" label="Custom CSS" desc="You can add custom CSS for content design" default="" />
+
+	</config>
+</style>

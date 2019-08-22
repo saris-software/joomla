@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5" method="upgrade" client="site">
+	<name>MOD_RSEVENTSPRO_MAP</name>
+	<creationDate>Sep 2017</creationDate>
+	<author>www.rsjoomla.com</author>
+	<copyright>GNU General Public License</copyright>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>https://www.rsjoomla.com</authorUrl>
+	<version>1.6</version>
+	<description>MOD_RSEVENTSPRO_MAP_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	
+	<updateservers>
+        <server type="extension" priority="1" name="RSEvents! Pro - Map Module">https://www.rsjoomla.com/updates/com_rseventspro/Modules/mod_rseventspro_map.xml</server>
+    </updateservers>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rseventspro_map.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rseventspro_map.sys.ini</language>
+	</languages>
+	
+	<files>
+		<filename module="mod_rseventspro_map">mod_rseventspro_map.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<media destination="mod_rseventspro_map" folder="media">
+		<folder>css</folder>
+		<filename>index.html</filename>
+	</media>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_rseventspro/models/fields">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_RSEVENTSPRO_MAP_CLASS_SUFFIX" description="MOD_RSEVENTSPRO_MAP_CLASS_SUFFIX" />
+				<field name="width" type="text" default="100%" label="MOD_RSEVENTSPRO_MAP_WIDTH" description="MOD_RSEVENTSPRO_MAP_WIDTH_DESC" />
+				<field name="height" type="text" default="400px" label="MOD_RSEVENTSPRO_MAP_HEIGHT" description="MOD_RSEVENTSPRO_MAP_HEIGHT_DESC" />
+				<field name="itemid" type="text" default="" label="MOD_RSEVENTSPRO_MAP_ITEMID" description="MOD_RSEVENTSPRO_MAP_ITEMID_DESC" />
+				
+				<field name="categories" type="category" extension="com_rseventspro" default="" label="MOD_RSEVENTSPRO_MAP_LIST_EVENTS_CATEGORIES" description="MOD_RSEVENTSPRO_MAP_LIST_EVENTS_CATEGORIES_DESC" multiple="multiple" class="rs200 rschosen" />
+				<field name="locations" type="rslocations" default="" label="MOD_RSEVENTSPRO_MAP_LIST_EVENTS_LOCATIONS" description="MOD_RSEVENTSPRO_MAP_LIST_EVENTS_LOCATIONS_DESC" multiple="multiple" class="rs200 rschosen" show_root="false" />
+				<field name="tags" type="rstags" default="" label="MOD_RSEVENTSPRO_MAP_LIST_EVENTS_TAGS" description="MOD_RSEVENTSPRO_MAP_LIST_EVENTS_TAGS_DESC" multiple="multiple" class="rs200 rschosen" />
+				<field name="choosen" type="rschosen" />
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

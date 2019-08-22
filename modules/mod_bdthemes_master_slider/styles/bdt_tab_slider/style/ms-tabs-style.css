@@ -1,0 +1,160 @@
+.ms-tabs-template {
+    padding-bottom: 101px;
+    margin: 0 auto;
+}
+
+.ms-tabs-vertical-template {
+	padding-right: 219px;
+	margin: 0 auto;
+	padding-bottom:0 !important;
+}
+.ms-tabs-vertical-template .ms-dir-h .ms-bullets-count {
+	position: relative;
+	right: -50%;
+}
+
+.ms-tabs-template .ms-thumb-list.ms-dir-h {
+	bottom: -101px;
+	width: 100%;
+	height: 113px;
+}
+
+.ms-tabs-template .ms-thumb-list.ms-dir-v {
+	height: 100%;
+	width: 229px;
+	right: -217px;
+	top: 0;
+}
+
+.ms-tabs-template .ms-thumb-frame {
+	cursor: pointer;
+	float: left;
+
+	background-color: #F6f6f6;
+	font-family: "Lato", sans-serif;
+	text-shadow: 0 1px 1px white;
+	color: #222;
+	border: solid 1px white;
+	border-width: 0 1px 1px 0;
+	
+	position: relative;
+	overflow: visible;
+	-webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+.ms-thumb-list.ms-dir-h .ms-thumb-frame {
+	width: 214px;
+	height: auto;
+	margin: 12px 0 0 0;
+}
+
+.ms-thumb-list.ms-dir-v .ms-thumb-frame {
+	width: 214px;
+	height: 100px;
+	margin-left: 12px;
+}
+
+.ms-tabs-template .ms-thumb{
+	padding: 20px 20px;
+}
+
+.ms-tabs-template .ms-thumb-frame h3 {
+	font-weight: 400;
+	font-size: 13pt;
+	margin:0;
+}
+
+.ms-tabs-template .ms-thumb-frame p {
+	font-size:10pt;
+	margin: 4px 0;
+}
+
+.ms-tabs-template .ms-thumb-frame-selected {
+	opacity: 1; 
+	background: #EDEDED;
+}
+
+.ms-tabs-template .ms-thumb-frame-selected h3{
+	color:#4b8aac;
+}
+
+.ms-tabs-template .ms-thumb-frame .ms-thumb-ol {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+.ms-tabs-template .ms-thumb-list.ms-dir-h .ms-thumb-frame .ms-thumb-ol {
+	top: 0px;
+    left: 50%;
+    margin-left: -12px;
+    
+	border-bottom: solid 12px #F6f6f6;
+    border-left: solid 12px transparent;
+    border-right: solid 12px transparent;
+}
+
+.ms-tabs-template .ms-thumb-list.ms-dir-h .ms-thumb-frame-selected .ms-thumb-ol{
+	opacity: 1;
+	top:-12px;
+	border-bottom-color: #EDEDED;
+}
+
+.ms-tabs-template .ms-thumb-list.ms-dir-v .ms-thumb-frame .ms-thumb-ol {
+	top: 50%;
+    left: 0;
+    margin-top: -12px;
+    border-right: solid 12px #EDEDED;
+    border-top: solid 12px transparent;
+    border-bottom: solid 12px transparent;
+}
+
+.ms-tabs-template .ms-thumb-list.ms-dir-v .ms-thumb-frame-selected .ms-thumb-ol{
+	opacity: 1;
+	left:-12px;
+	border-right-color:white;
+}
+
+@media (max-width: 500px) {
+	.ms-tabs-template .ms-thumb{padding: 10px 10px;	}
+	.ms-tabs-template .ms-thumb-frame p {display: none;	}
+	.ms-thumb-list.ms-dir-h .ms-thumb-frame {width: 180px;	}
+	.ms-tabs-vertical-template {padding-right: 180px;}
+	.ms-thumb-list.ms-dir-v .ms-thumb-frame {
+		width: 180px;
+		height: 45px;
+	}
+	.ms-tabs-template { padding-bottom:45px;}
+ }
+ 
+ @media (max-width: 400px) {
+	.ms-thumb-list.ms-dir-v {display:none;}
+	.ms-tabs-vertical-template {padding-right: 0px;}
+ }
+ 
+ /* Layers */
+.ms-layer.video-title {
+    font-family: "Lato",sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 42px;
+    margin:0px;
+    letter-spacing:0px;
+}
+
+.ms-layer.video-title.video-top-title {
+    font-size: 16px;
+    color: gray;
+}
+
+.ms-layer.video-title.video-sub-title {
+    font-size: 22px;
+    font-weight: 300;
+}

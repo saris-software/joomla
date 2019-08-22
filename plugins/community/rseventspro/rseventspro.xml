@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community" method="upgrade">
+	<name>RSEvents!Pro - JomSocial plugin</name>
+	<author>RSJoomla!</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>Copyright 2012 rsjoomla.com. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>http://www.rsjoomla.com</authorUrl>
+	<version>1.0</version>
+	<isapplication>true</isapplication>
+	<description>PLG_RSEVENTSPRO_EVENTS_XML_DESCRIPTION</description>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_community_rseventspro.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_community_rseventspro.sys.ini</language>
+	</languages>
+	
+	<files>
+		<file plugin="rseventspro">rseventspro.php</file>
+		<folder>rseventspro</folder>
+	</files>
+	
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_community/libraries/fields">
+			<fieldset name="basic">
+				
+				<field name="coreapp" type="list" default="0" label="PLG_RSEVENTSPRO_CORE_APP" description="PLG_RSEVENTSPRO_CORE_APP_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="cache" type="list" default="1" label="PLG_RSEVENTSPRO_CACHING" description="PLG_RSEVENTSPRO_CACHING_DESC">
+					<option value="1">PLG_RSEVENTSPRO_GLOBAL</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="ordering" type="list" default="start" label="PLG_RSEVENTSPRO_ORDERING" description="PLG_RSEVENTSPRO_ORDERING_DESC">
+					<option value="name">PLG_RSEVENTSPRO_NAME_ORDERING</option>
+					<option value="start">PLG_RSEVENTSPRO_STARTDATE_ORDERING</option>
+				</field>
+				
+				<field name="order" type="list" default="ASC" label="PLG_RSEVENTSPRO_ORDERING_DIRECTION" description="PLG_RSEVENTSPRO_ORDERING_DIRECTION_DESC">
+					<option value="DESC">PLG_RSEVENTSPRO_ORDERING_DIRECTION_DESCENDING</option>
+					<option value="ASC">PLG_RSEVENTSPRO_ORDERING_DIRECTION_ASCENDING</option>
+				</field>
+				
+				<field name="links" type="list" default="0" label="PLG_RSEVENTSPRO_LINKS" description="PLG_RSEVENTSPRO_LINKS_DESC">
+					<option value="0">PLG_RSEVENTSPRO_LINKS_NEW</option>
+					<option value="1">PLG_RSEVENTSPRO_LINKS_CURRENT</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

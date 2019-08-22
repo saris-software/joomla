@@ -1,0 +1,166 @@
+.rs_eventsslider_timeline {
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.rs_events_slider_timeline_container {
+	position: relative;
+}
+
+.rs_events_slider_timeline_events {
+	list-style: none outside none !important;
+	margin: 0 !important;
+	position: absolute;
+}
+
+.rs_events_slider_timeline_events li {
+	background: none repeat scroll 0 0 #F2F3F6;
+	border: 1px solid #C8C8C8;
+    float: left;
+    margin-right: 10px !important;
+	margin-bottom: 10px !important;
+	padding: 15px !important;
+	height: 150px;
+	width: 202px;
+	overflow: hidden;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rs_events_slider_timeline_events li:hover {
+	background: none repeat scroll 0 0 #FFFFFF !important;
+}
+
+.rs_events_slider_timeline_events li .rse_date {
+	background: none repeat scroll 0 0 #c8c8c8;
+	float: left;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 45px;
+	font-size: 14px;
+	font-weight: bold;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rs_events_slider_timeline_events li .rse_name {
+    display: block;
+	font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	clear: right;
+}
+
+.rs_events_slider_timeline_events li .rse_descr {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.rs_events_slider_timeline_events li.inactive {
+	visibility: hidden;
+}
+
+.rseprobar {
+	background: none repeat scroll 0 0 #BBBBBB;
+	width: 94%;
+	height: 16px;
+	left: 5px;
+	position: relative;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rs_events_slider_timeline {
+	height: 200px;
+    overflow: hidden;
+    position: relative;
+	width: 100%;
+	left: 4px;
+	top: 0;
+}
+
+.rsepropanes {
+	overflow: hidden;
+}
+
+.resprobar_container div.rsepropane,
+.resprobar_container div.rsepropane:hover,
+.resprobar_container div.rsepropane:active,
+.resprobar_container div.rsepropane:focus {
+	background: none no-repeat scroll 0 0 #FFFFFF;
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+	top: 4px;
+    position: absolute;
+    visibility: visible;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.resprobar_container div.active,
+.resprobar_container div.active:hover,
+.resprobar_container div.active:active,
+.resprobar_container div.focus {
+	background: none no-repeat scroll 0 0 #000000 !important;
+	height: 9px;
+    width: 9px;
+}
+
+.resprobar_container div.rsepropane span {
+	display: block;
+    height: 8px;
+    position: relative;
+}
+
+.resprobar_container {
+	background: none repeat scroll 0 0 #BBBBBB;
+	height: 16px;
+	padding: 0 28px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rseprodates {
+	width: 99%;
+	height: 16px;
+	position: relative;
+	margin-top: 5px;
+}
+
+.rsepro_dates {
+	margin-top: 5px;
+    overflow: hidden;
+	padding: 0 28px;
+}
+
+.rseprodate {
+	background: none repeat scroll 0 0 #F2F3F6;
+    border: 1px solid #C8C8C8;
+    cursor: pointer;
+    padding: 0 5px;
+    position: absolute;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 16px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.rseprodates div.active {
+	background: none;
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name>ja_edenite_ii</name>
+	<version>1.0.2</version>
+	<creationDate>Jan 21, 2019</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.t3-framework.org</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<t3>
+		<base>base-bs3</base>
+	</t3>
+	<description>
+		<![CDATA[
+		<div align="center">
+			<div class="alert alert-success" style="background-color:#DFF0D8;border-color:#D6E9C6;color: #468847;padding: 1px 0;">
+				
+				<h3><a href="//www.joomlart.com/downloads/joomla-templates/ja-edenite-ii/">Joomla template is designed for corporate and business website - JA Edenite II</a></h3>
+				
+				<h4><a href="//www.joomlart.com/joomla/templates/ja-edenite-ii" title="">Home</a> | <a href="//joomlart.com/demo/#ja-edenite-ii" title="">Demo</a> | <a href="http://www.joomlart.com/documentation/joomla-templates/ja-edenite-ii" title="">Document</a> | <a href="//pm.joomlart.com/browse/JEDENITEII" title="">Changelog</a></h4>
+
+				<p>JA Edenite II Joomla template is designed for corporate and business website. It comes with simple and clean style and flexible layout. The template is based on our new T3 Framework, it is fully responsive based on Bootstrap 3. The template support all default Joomla pages with customized style to fit the template design.</p>
+
+				<span style="color:#FF0000">Note: T3 blank requires T3 plugin to be installed and enabled.</span><p></p>
+				<p>Copyright 2004 - 2019 <a href='http://www.joomlart.com/' title='Visit Joomlart.com!'>JoomlArt.com</a>.</p>
+			</div>
+			<style>table.adminform{width: 100%;}</style>
+		</div>
+		]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>offline.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>thememagic.xml</filename>
+		<filename>templateInfo.php</filename>
+		<filename>templateHook.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>acm</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>language</folder>
+		<folder>images</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_edenite_ii.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_edenite_ii.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>content-mass-bottom</position>
+		<position>content-mass-top</position>
+		<position>footer</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>head-login</position>
+		<position>nav-search</position>
+		<position>navhelper</position>
+		<position>off-canvas</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>debug</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+
+			<!-- Sample for add or disable template parameters -->
+			<!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+				<field name="group_disable" type="t3depend" function="@group">
+					<option for="menu_as_bg" value="no">menu_as_bg</option>
+				</field>
+			</fieldset-->
+			
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension">http://update.joomlart.com/service/tracking/j31/ja_edenite_ii.xml</server>
+	</updateservers>
+
+</extension>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="search" method="upgrade">
+	<name>Search - JE FAQPro</name>
+	<creationDate>Januaury 2012</creationDate>
+	<author>JExtension</author>
+	<authorEmail>contact@jextn.com</authorEmail>
+	<authorUrl>www.jextn.com</authorUrl>
+	<copyright>2012</copyright>
+	<license>GNU General Public License v2, see LICENSE.php</license>
+	<version>3.0.5</version>
+	<description>Its supports default joomla search module. So users can search their own way.</description>
+
+	<files>
+	   <filename plugin="jefaqpro">jefaqpro.php</filename>
+	</files>
+
+	<languages>
+	   <language tag="en-GB">en-GB.plg_search_jefaqpro.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			   <field name="searchlimit" type="text" default="50" label="PARAMLIMIT" description="JE_NOITEMS"/>
+			   <field name="searchcategory" type="radio" default="0" label="PARAMCATEGORY" description="JE_SEARCHCATEGORY">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,466 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Package - Joomla module Powered by YJ Module Engine                ||
+|| # Copyright (C) 2010  Youjoomla.com. All Rights Reserved.            ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of Youjoomla.com                      ||
+|| # for more information visit http://www.youjoomla.com/license.html   ||
+|| # Redistribution and  modification of this software                  ||
+|| # is bounded by its licenses                                         ||
+|| # websites - http://www.youjoomla.com | http://www.yjsimplegrid.com  ||
+|| #################################################################### ||
+\*======================================================================*/
+
+.yjspacer_holder {
+	background:#fff;
+	padding:5px;
+	display:block;
+	width:400px;
+	text-align:center;
+	overflow:hidden;
+	border:1px solid #DDDDDD;
+	margin:10px auto 10px auto;
+	clear:both;
+}
+.controls .button2-left.btn{
+	margin-left:10px;
+	margin-top:3px;
+}
+.controls .yjspacer_holder{
+	float:left;
+	font-family: Arial,sans-serif;
+}
+.tip-wrap,.tip{
+	width:auto!important;
+	text-align:left;
+}
+.panelform, .pane-slider {
+	background:#f6f6f6!important;
+}
+.pane-slider label {
+	width:190px!important;
+	font-weight:bold;
+	font-size:11px;
+	text-shadow:1px 1px #fff;
+}
+.pane-slider li {
+	border-bottom:1px solid #DDDDDD;
+	overflow:hidden;
+}
+li.k2_items_holder_yjme, li.joomla_items_holder_yjme, li.item_source_yjme, li.get_items_yjme, li.show_frontpage_yjme, li.item_yjme, li.k2item_yjme,li.category_id_yjme {
+	border:none!important;
+}
+.yjspacer {
+	padding:5px;
+	background:#DEDEDE;
+	border:1px solid #DDDDDD;
+	text-shadow:1px 1px #fff;
+	font-size:12px;
+}
+.yjspacer_border {
+	display:block;
+	overflow:hidden;
+	clear:both;
+	border-bottom:1px solid #E9E9E9;
+}
+#selectedresult {
+	display:block;
+	margin:0 auto;
+	padding:10px;
+	text-align:center;
+	font-weight:bold;
+	font-size:18px;
+	text-shadow:1px 1px #fff;
+	color:#999;
+}
+.yj_holder {
+	display:block;
+	overflow:hidden;
+	clear:both;
+	margin:0;
+	padding:10px;
+	background:#eee;
+	border:1px solid #DDDDDD;
+	text-shadow:1px 1px #fff;
+	font-size:12px;
+}
+#jform_params_item_source {
+	margin-bottom:10px!important;
+}
+.yj_holder fieldset {
+	background:#eee!important;
+}
+.togh_yj, .togh_k2 {
+	clear:both;
+}
+#jform_params_j_news_source-lbl, #jform_params_k2_news_source-lbl, #jform_params_joomla_items_holder-lbl, #jform_params_k2_items_holder-lbl, #jform_params_select_source_title-lbl, #jform_params___field1-lbl {
+	display:none!important;
+}
+#jform_params_get_items, #jformparamscategory_id {
+	height:100px;
+	margin:8px 0 0 0;
+	clear:both;
+	display:block;
+	width:90%;
+}
+#k2_select_items, #joomla_select_items {
+	float:left;
+	margin:5px 0 0 0;
+	clear:both;
+	height:auto!important;
+}
+#jform_params_module_css {
+}
+#css_file, #copy_template {
+	display:block;
+	float:left;
+	overflow:hidden;
+	margin:0 0 10px 0;
+}
+.clearbuttons {
+	clear:both;
+	display:block;
+	margin:10px 0 0 0;
+	height:10px;
+}
+#itemsList, #itemsListk2 {
+	overflow:hidden;
+	padding:10px 0;
+	display:block;
+	float:left;
+	clear:both;
+	height:auto!important;
+}
+#itemsList span, #itemsListk2 span {
+	display:inline-block;
+	height:16px;
+	line-height:16px;
+	color:green;
+	font-weight:bold;
+}
+#itemsList span.handle, #itemsListk2 span.handlek2 {
+	cursor:move;
+	font-weight:bold;
+}
+#itemsList img.remove, #itemsListk2 img.removek2 {
+	width:16px;
+	height:16px;
+	margin:0px 3px 0 0;
+	cursor:pointer;
+	float:left;
+}
+#itemsListk2 span.handlek2 {
+	color:#1A6EAE;
+}
+#k2not {
+	float:right;
+	color:red;
+	font-weight:bold;
+}
+/* yjcreate*/
+body.create {
+	background:#F6F6F6;
+	font: 12px Arial, Helvetica, sans-serif;
+	padding:0;
+	margin:0;
+}
+#createholder {
+	width:320px;
+	height:180px;
+	position:relative;
+	margin:10px auto;
+	display:block;
+	overflow:hidden;
+	border: 1px solid #e7e7e7;
+	text-shadow:1px 1px #fff;
+}
+#createholder div.inside {
+	border:1px solid #fff;
+	height:178px;
+	display:block;
+	overflow:hidden;
+	position:relative;
+}
+#createholder h3 {
+	font-size:14px;
+	font-weight:bold;
+	line-height:14px;
+	text-align:center;
+}
+#typeholder {
+	height:20px;
+	width:100%;
+	display:block;
+	position:relative;
+	text-align:center;
+}
+body.create input {
+	border:1px solid #ccc;
+	margin:0 auto;
+	padding:0;
+	height:18px;
+	line-height:18px;
+}
+body.create input#foldername, body.create input#cssfilename {
+	width:220px;
+	position:absolute;
+	display:block;
+	margin:0;
+	clear:both;
+	top:0;
+	left:10px;
+}
+body.create span.button {
+	background:#F0F0F0;
+	border: 1px solid #ccc!important;
+	overflow:hidden;
+	display:block;
+	margin:0;
+	padding:0 3px;
+	height:18px;
+	text-align:center;
+	position:absolute;
+	right:10px;
+	z-index:1000;
+	top:0;
+}
+body.create span.button input {
+	background:#F0F0F0;
+	border:0;
+	cursor:pointer;
+}
+.validation-advice, .error, .tmname {
+	font-weight:bold;
+	color:red;
+}
+#createholder span.error {
+	color:red;
+}
+#createholder span.thnx {
+	color:green;
+}
+.spinner {
+	position: absolute;
+	background: url(../images/spinnerbg.png);
+	height:180px!important;
+	top:0!important;
+}
+.spinner-msg {
+	text-align: center;
+	font-weight: bold;
+}
+.spinner-img {
+	background: url(../images/ajax-loader.gif) no-repeat center center;
+	width: 24px;
+	height: 24px;
+	margin:65px 0 0 auto;
+}
+#responsetext {
+	position:absolute;
+	height:180px;
+	width:320px;
+	top:0;
+	left:0;
+	z-index:10000;
+	font: bold 12px/160px "Courier New", Courier, monospace;
+	text-align:center;
+}
+/* upload */
+#createholder.css_upload {
+	width:350px;
+}
+#response, .validation-advice {
+	padding: 10px;
+	font: 1.2em "Courier New", Courier, monospace;
+	font-weight:bold;
+	text-align:center;
+}
+.validation-advice {
+	position:absolute;
+	background: #f5f5f5;
+	top:20px;
+	display:block;
+	width:300px;
+	text-align:center;
+	overflow:hidden;
+	left:0;
+	height:110px;
+}
+#response.loading {
+	background: url(../images/spinnerbg.png);
+	height:180px;
+	position:absolute;
+	top:0;
+	left:0;
+	width:350px;
+	line-height:150px;
+}
+#responsein.spin {
+	background: url(../images/ajax-loader.gif) no-repeat center 107px;
+	position:absolute;
+	height:180px;
+	width:350px;
+	top:0;
+	left:0;
+}
+span.input_file_wrapper {
+	background:url(../images/browse.jpg) top left no-repeat;
+	border:none;
+	height:20px;
+	display:block;
+	position:relative;
+	width:220px;
+	overflow:hidden;
+	text-align:right;
+	margin:0 0 0 10px;
+	float:left;
+	cursor:pointer!important;
+}
+#css_upload {
+	cursor:pointer!important;
+}
+span.input_file_wrapper input.fake-text {
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:20px;
+	line-height:20px;
+	padding:0 0 0 3px;
+	margin:0px;
+	width:153px;
+	background:none;
+	border:none;
+	font-size:10px;
+	font-weight:bold;
+}
+/* file edit*/
+#yjme_edit {
+	display:block;
+	position:relative;
+	overflow:hidden;
+	z-index:1;
+}
+fieldset#yjme_fileview {
+	border:1px solid #ccc;
+	padding:10px 0;
+}
+#yjme_edit legend {
+	font-weight:bold;
+	margin:0 0 0 30px;
+}
+#yjme_save {
+}
+#yjme_save textarea {
+	border:1px solid #ccc;
+}
+#yjme_save .save_button {
+	background:#F0F0F0;
+	border: 1px solid #ccc!important;
+	cursor:pointer;
+	font-weight:bold;
+	margin:10px 0 0 5px;
+}
+#yjme_save .save_button.top {
+	margin:10px 10px 10px 5px;
+}
+span.file_saved_txt {
+	color:green;
+	font-size:13px;
+	display:block;
+	margin:0 20px;
+	overflow:hidden;
+	font-weight:bold;
+	position:absolute;
+	top:55px;
+	left:65px;
+	z-index:100;
+	text-align:center;
+}
+#yjme_saveresponse {
+	display:block;
+	position:absolute;
+	width:700px;
+	height:0px;
+	background:#ccc;
+	top:0;
+	left:0px;
+	background: url(../images/spinnerbg.png);
+	font: 13px/620px "Courier New", Courier, monospace;
+	font-weight:bold;
+	text-align:center;
+	overflow:hidden;
+	z-index:100;
+}
+#yjme_saveresponse #yjme_spin {
+	width:700px;
+	height:500px;
+	background: url(../images/ajax-loader.gif) no-repeat center 280px;
+	display:block;
+	position:relative;
+	top:0;
+	left:0;
+	z-index:120;
+}
+#top_select {
+	position:absolute;
+	display:block;
+	top:25px;
+	right:10px;
+	width:300px;
+	height:42px;
+	z-index:100;
+}
+.current_edit {
+	display:block;
+	margin:5px 0 0 0;
+	font-weight:bold;
+	width:100%;
+	height:20px;
+	float:right;
+	text-align:right;
+}
+.current_name {
+	display:block;
+	margin:0 0px 0 10px;
+	color:green;
+	float:right;
+}
+#yjme_selected {
+	margin:0 0 5px 0;
+	display:block;
+	float:right;
+}
+iframe.fileedit {
+	border: 1px solid #ccc!important;
+	background:#fff!important;
+}
+div.CodeMirror-line-numbersyj {
+	background-color: #eee;
+	color: #aaa;
+	font-family: monospace;
+	font-size: 10pt;
+	padding: 7px 0.3em 4px 0;
+	width: 2.2em;
+	line-height: 1.2;
+	padding-right: 0.3em;
+	text-align: right;
+}
+div.CodeMirror-line-numbersyj pre {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+	border-width: 0;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0;
+	margin: 0;
+	white-space: pre;
+	word-wrap: normal;
+	z-index:20;
+}

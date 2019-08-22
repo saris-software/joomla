@@ -1,0 +1,66 @@
+.pane-sliders .panel { border: none !important; }
+div.panel > h3 { height: 30px!important;padding:0!important; background: #fff!important; border: 1px solid #ccc; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font: bold 18px/30px Arial, Helvetica, sans-serif}
+div.panel > h3 a { color: #333!important;}
+div.panel h3.pane-toggler-down{ background:#D5EEFF!important;border: 1px solid #A4CDE9!important; width:100%; height:100%}
+div.panel h3.pane-toggler-down a { color: #333!important; }
+.sub-heading {background:#D5EEFF!important;border: 1px solid #A4CDE9!important; color:#333!important;width:400px;  -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font: bold 15px/30px Arial, Helvetica, sans-serif; display:block; padding:0 10px; text-align:left!important; margin:0 0 10px 0}
+.description {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font-weight:normal; border:1px solid #ccc; padding:10px; max-width:400px}
+.description p { padding:0; margin:0}
+.sub-heading span {color:#777}
+.pane-toggler span { padding: 10px 0 10px 20px !important;background:none!important; }
+.pane-toggler-down span { padding: 10px 0 10px 20px !important;background:none !important; }
+.pane-sliders .content { margin: 4px auto; width: 100%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.pane-down {border: 1px solid #ccc !important;}
+.panel fieldset.panelform > ul > li > label { color: #444; font-size: 11px; font-weight: bold; height: 24px; line-height: 24px; padding: 0 20px 0 10px; text-align: right; max-width: 30%!important; min-width: 30%!important;}
+.panel fieldset.panelform > ul > li fieldset { line-height:28px; }
+fieldset.panelform input { height: 16px; color: #555; line-height: 16px; padding: 4px; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; width:250px; }
+fieldset.panelform select { height: 26px; color: #555; line-height: 24px; padding: 4px; font-size:11px; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;width:150px; }
+fieldset.panelform select[multiple=multiple] { height: auto!important}
+fieldset.panelform textarea {border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;width:250px;padding: 4px;}
+.fltrt ul.adminformlist li { overflow: hidden; border-bottom: 1px solid #eee; padding: 1px 10px; margin: 0; }
+.custom-tabs {background:#D5EEFF!important;border: 1px solid #A4CDE9!important;   -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font-weight:bold; display:block; padding:0 10px}
+
+label[id^="jform_params_"], label[id*="jform_params_"] { font-weight:bold; text-align:right; width:150px}
+.credits { font-size:10px}
+
+.control-label { padding:0!important}
+
+span#Icon{width:24px;height:24px; text-indent:-9999px;background-image:url(../images/social.png); display:block}
+
+#IconOut { float:right;  padding:5px; margin:0 0 0 10px}
+
+.Icon1Out{background-color: #265999;}
+.Icon2Out{background-color: #00b1ef;}
+.Icon3Out{background-color: #f32e31;}
+.Icon4Out{background-color: #f00028;}
+.Icon5Out{background-color: #ff5100;}
+.Icon6Out{background-color: #00749c;}
+.Icon7Out{background-color: #ef0020;}
+.Icon8Out{background-color: #0081b2;}
+.Icon9Out{background-color: #0076d3;}
+.Icon10Out{background-color: #ff6f00;} 
+.Icon11Out{background-color: #ff0000;}
+.Icon12Out{background-color: #ff2519;}
+.Icon13Out{background-color: #878d90;}
+.Icon14Out{background-color: #ff7700;}
+.Icon15Out{background-color: #7CC576;}
+.Icon16Out{background-color: #ED1983;}
+.Icon17Out{background-color: #5A6478;}
+
+#Icon.Icon1{background-position: 0px 0px;}
+#Icon.Icon2{background-position: 0px -24px;}
+#Icon.Icon3{background-position: 0px -48px;}
+#Icon.Icon4{background-position: 0px -72px;}
+#Icon.Icon5{background-position: 0px -96px;}
+#Icon.Icon6{background-position: 0px -120px;}
+#Icon.Icon7{background-position: 0px -144px;}
+#Icon.Icon8{background-position: 0px -168px;}
+#Icon.Icon9{background-position: 0px -192px;}
+#Icon.Icon10{background-position: 0px -216px;} 
+#Icon.Icon11{background-position: 0px -240px;}
+#Icon.Icon12{background-position: 0px -264px;}
+#Icon.Icon13{background-position: 0px -288px;}
+#Icon.Icon14{background-position: 0px -312px;}
+#Icon.Icon15{background-position: 0px -336px;}
+#Icon.Icon16{background-position: 0px -360px;}
+#Icon.Icon17{background-position: 0px -384px;}

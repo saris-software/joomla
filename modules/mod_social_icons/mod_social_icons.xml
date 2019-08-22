@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+	<name>MOD_SOCIAL_ICONS</name>
+	<author>Bilal Kabeer Butt</author>
+	<creationDate>28-2-2013</creationDate>
+	<copyright>All rights reserved by GegaByte.</copyright>
+	<license>GPL 2.0</license>
+	<authorEmail>info@gegabyte.org</authorEmail>
+	<authorUrl>www.gegabyte.org</authorUrl>
+	<version>3.0</version>
+	<description>
+		&lt;div style="text-align:left;"&gt;
+			&lt;h1 style="text-align: center;" &gt; Social Icons &lt;/h1&gt;
+			&lt;p&gt; Shows social icons for websites like &lt;br /&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Facebook &lt;/li&gt;
+				&lt;li&gt;Gmail &lt;/li&gt;
+				&lt;li&gt;Google+ &lt;/li&gt;
+				&lt;li&gt;YouTube &lt;/li&gt;
+				&lt;li&gt;Twitter &lt;/li&gt;
+				&lt;li&gt;Outlook &lt;/li&gt;
+				&lt;li&gt;Yahoo! &lt;/li&gt;
+				&lt;li&gt;LinkedIn &lt;/li&gt;
+				&lt;li&gt;Skype &lt;/li&gt;
+				&lt;li&gt;RSS &lt;/li&gt;
+				&lt;li&gt;Instagram &lt;/li&gt;
+			&lt;/ul&gt;
+			
+			Icons can be shown as floating icons or as non-floating icons, Grouped social icon under one tab, new look and design. Use the existing images or choose your own.
+			&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div style="text-align: center;" &gt;
+			&lt;img src="http://www.gegabyte.org/subdomains/sig/made-in-pakistan.jpg" width="320" /&gt;
+		&lt;/div&gt;
+	</description>
+
+
+	<files>
+		<filename module="mod_social_icons">mod_social_icons.php</filename>
+		<filename>index.html</filename>
+		<filename>custom_icons.xml</filename>
+		<filename>Version Change.txt</filename>
+		<folder>tmpl</folder>
+	</files>
+	
+	<updateservers>
+		<server type="extension" name="Social Icons" priority="1">http://www.gegabyte.org/joomla_extension_updates/social_icons_update.xml</server>
+	</updateservers>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_social_icons.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_social_icons.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.override.ini</language>
+	</languages>
+	
+	<config>	
+		<fields name="params">
+			
+			<fieldset name="GENERAL_SETTING">
+				
+				<field name="floating" class="btn-group btn-group-yesno" type="radio" default="1" label="Show floating icons" description="Show floating icons">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="usecustomtop" class="btn-group btn-group-yesno" type="radio" default="1" label="Custom Top Position" description="Top Position" showon="floating:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>				
+				<field name="CssTop" type="number" default="0" label="Top Position" description="Top Position" step="1" showon="floating:1[AND]usecustomtop:1" />
+				
+				<field name="newline" class="btn-group btn-group-yesno" type="radio" default="0" label="Show icons on separate lines" description="Show icons on separate lines" showon="floating:0">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>				
+				
+				<field type="spacer" name="myspacer1" hr="true" />
+				
+				<field name="showdebug" class="btn-group btn-group-yesno" type="radio" default="0" label="Show debug info at front-end" description="Show debug info at front-end">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="GOOGLE">
+				
+				<field name="showgmail" class="btn-group btn-group-yesno" type="radio" default="1" label="Show Gmail icon" description="Show Gmail icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="gmail_id" type="email" default="" label="Gmail ID" hint="myemail@gmail.com" description="Enter Gmail ID (myemail@gmail.com)" size="50" showon="showgmail:1" />				
+				<field name="usegmailcustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showgmail:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>				
+				<field name="showgmailcustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom Gmail Icon" description="Show custom Gmail Icon" showon="showgmail:1[AND]usegmailcustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom Gmail Icon" name="customgmailicon" type="media" directory="" showon="showgmail:1[AND]showgmailcustomicon:1[AND]usegmailcustomsettings:1"/>
+				<field name="showgmailclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showgmail:1[AND]usegmailcustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_gmail" type="text" default="" label="Gmail Custom label" hint="GMail" description="GMail" size="50" showon="showgmail:1[AND]showgmailclbl:1[AND]usegmailcustomsettings:1"/>
+				
+				<field type="spacer" name="nfi1" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showgmail:1" />
+				<field name="showgmailicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showgmail:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+				
+				<field type="spacer" name="myspacer1" hr="true" />
+				
+				<field name="showgooleplus" class="btn-group btn-group-yesno" type="radio" default="1" label="Show Google+ Icon" description="Show Google+ Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="gooleplus_id" type="text" default="" label="Google+ ID" description="Enter Google+ ID (Do not include +" size="50" showon="showgooleplus:1"/>
+				<field name="gplusreg" class="btn-group btn-group-yesno" type="radio" default="1" label="Is your Google+ id registered" description="Is your Google+ id registered" showon="showgooleplus:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>				
+				<field name="usegpluscustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showgooleplus:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>				
+				<field name="showgpluscustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom Google+ Icon" description="Show custom Google+ Icon" showon="showgooleplus:1[AND]usegpluscustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom Google+ Icon" name="customgplusicon" type="media" directory="" showon="showgooleplus:1[AND]showgpluscustomicon:1[AND]usegpluscustomsettings:1"/>				
+				<field name="showgplusclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showgooleplus:1[AND]usegpluscustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_gplus" type="text" default="" label="Google+ custom label" hint="Google+" description="Google+" size="50" showon="showgooleplus:1[AND]showgplusclbl:1[AND]usegpluscustomsettings:1"/>
+				
+				<field type="spacer" name="nfi2" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showgooleplus:1" />
+				<field name="showgoogleplusicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showgooleplus:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+				
+				<field type="spacer" name="myspacer2" hr="true" />
+				
+				<field name="showyoutube" class="btn-group btn-group-yesno" type="radio" default="1" label="Show YouTube Icon" description="Show YouTube Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="youtube_id" type="text" default="" label="YouTube ID" description="Enter YouTube ID" size="50" showon="showyoutube:1"/>
+				<field name="youtubechannel" class="btn-group btn-group-yesno" type="radio" default="0" label="Is the ID of YouTube channel?" description="Is the ID of YouTube channel?" showon="showyoutube:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+				<field name="useyoutubecustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showyoutube:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+				<field name="showyoutubecustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom YouTube Icon" description="Show custom YouTube Icon" showon="showyoutube:1[AND]useyoutubecustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom YoutTube Icon" name="customyoutubeicon" type="media" directory="" showon="showyoutube:1[AND]showyoutubecustomicon:1[AND]useyoutubecustomsettings:1"/>				
+				<field name="showyoutubeclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showyoutube:1[AND]useyoutubecustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_youtube" type="text" default="" label="YouTube! custom label" hint="YouTube!" description="YouTube!" size="50" showon="showyoutube:1[AND]showyoutubeclbl:1[AND]useyoutubecustomsettings:1"/>
+				
+				<field type="spacer" name="nfi3" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showyoutube:1" />
+				<field name="showyoutubeicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showyoutube:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+						
+			</fieldset>
+			
+			<fieldset name="MICROSOFT">
+				
+				<field name="showoutlook" class="btn-group btn-group-yesno" type="radio" default="1" label="Show Outlook Icon" description="Show Outlook Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="outlook_id" type="email" default="" label="Outlook ID" hint="myemail@hotmail.com" description="Enter Outlook ID (myemail@hotmail.com, myemail@outlook.com)" size="50" showon="showoutlook:1"/>
+				<field name="useoutlookcustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showoutlook:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showoutlookcustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom Outlook Icon" description="Show custom Outlook Icon" showon="showoutlook:1[AND]useoutlookcustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom Outlook Icon" name="customoutlookicon" type="media" directory="" showon="showoutlook:1[AND]showoutlookcustomicon:1[AND]useoutlookcustomsettings:1"/>
+				<field name="showoutlookclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showoutlook:1[AND]useoutlookcustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_outlook" type="text" default="" label="Outlook custom label" hint="Outlook" description="Outlook" size="50" showon="showoutlook:1[AND]showoutlookclbl:1[AND]useoutlookcustomsettings:1"/>
+				
+				<field type="spacer" name="nfi4" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showoutlook:1" />
+				<field name="showoutlookicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showoutlook:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+				
+				<field type="spacer" name="myspacer3" hr="true" />
+				
+				<field name="showskype" class="btn-group btn-group-yesno" type="radio" default="1" label="Show Skype Icon" description="Show Skype Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="skype_id" type="text" default="" label="Skype ID" description="Enter Skype ID" size="50" showon="showskype:1"/>
+				<field name="useskypecustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showskype:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showskypecustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom Skype Icon" description="Show custom Skype Icon" showon="showskype:1[AND]useskypecustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom Skype Icon" name="customskypeicon" type="media" directory="" showon="showskype:1[AND]showskypecustomicon:1[AND]useskypecustomsettings:1"/>
+				<field name="showskypeclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showskype:1[AND]useskypecustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_skype" type="text" default="" label="Skype custom label" hint="Skype" description="Skype" size="50" showon="showskype:1[AND]showskypeclbl:1[AND]useskypecustomsettings:1"/>
+				
+				<field type="spacer" name="nfi5" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showskype:1" />
+				<field name="showskypeicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showskype:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="YAHOO">
+				
+				<field name="showyahoo" class="btn-group btn-group-yesno" type="radio" default="1" label="Show Yahoo Icon" description="Show Yahoo Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="yahoo_id" type="text" default="" label="Yahoo ID" hint="myemail@yahoo.com" description="Enter Yahoo ID (myemail@yahoo.com)" size="50" showon="showyahoo:1"/>				
+				<field name="useyahoocustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showyahoo:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showyahoocustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom Yahoo! Icon" description="Show custom Yahoo! Icon" showon="showyahoo:1[AND]useyahoocustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom Yahoo Icon" name="customyahooicon" type="media" directory="" showon="showyahoo:1[AND]showyahoocustomicon:1[AND]useyahoocustomsettings:1"/>				
+				<field name="showyahooclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showyahoo:1[AND]useyahoocustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_yahoo" type="text" default="" label="Yahoo! custom label" hint="Yahoo!" description="Yahoo!" size="50" showon="showyahoo:1[AND]showyahooclbl:1[AND]useyahoocustomsettings:1"/>
+				
+				<field type="spacer" name="nfi6" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showyahoo:1" />
+				<field name="showyahooicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showyahoo:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="SOCIAL">
+				
+				<field name="showfacebook" class="btn-group btn-group-yesno" type="radio" default="1" label="Show Facebook Icon" description="Show Facebook Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>								
+				<field name="facebook_id" type="text" default="" label="Facebook ID" description="Enter Facebook ID" size="50" showon="showfacebook:1"/>				
+				<field name="usefacebookcustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showfacebook:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>				
+				<field name="showfbcustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom Facebook Icon" description="Show custom Facebook Icon" showon="showfacebook:1[AND]usefacebookcustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom Facebook Icon" name="customfbicon" type="media" directory="" showon="showfacebook:1[AND]showfbcustomicon:1"/>
+				<field name="showfacebookclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showfacebook:1[AND]usefacebookcustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_facebook" type="text" default="" label="Facebook custom label" hint="Facebook" description="Facebook" size="50" showon="showfacebook:1[AND]showfacebookclbl:1[AND]usefacebookcustomsettings:1"/>
+				
+				<field type="spacer" name="nfi7" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showfacebook:1" />
+				<field name="showfacebookicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showfacebook:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>				
+				
+				<field type="spacer" name="myspacer4" hr="true" />
+				
+				<field name="showtwitter" class="btn-group btn-group-yesno" type="radio" default="1" label="Show Twitter Icon" description="Show Twitter Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="twitter_id" type="text" default="" label="Twitter ID" description="Enter Twitter ID" size="50" showon="showtwitter:1"/>
+				<field name="usetwicustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showtwitter:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showtwicustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom Twitter Icon" description="Show custom Twitter Icon" showon="showtwitter:1[AND]usetwicustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom Twitter Icon" name="customtwiicon" type="media" directory="" showon="showtwitter:1[AND]showtwicustomicon:1[AND]usetwicustomsettings:1"/>
+				<field name="showtwitterclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showtwitter:1[AND]usetwicustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_twitter" type="text" default="" label="Twitter custom label" hint="Twitter" description="Twitter" size="50" showon="showtwitter:1[AND]showtwitterclbl:1[AND]usetwicustomsettings:1"/>
+				
+				<field type="spacer" name="nfi8" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showtwitter:1" />
+				<field name="showtwittericon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showtwitter:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+								
+				<field type="spacer" name="myspacer5" hr="true" />
+				
+				<field name="showlinkedin" class="btn-group btn-group-yesno" type="radio" default="1" label="Show Linkedin Icon" description="Show Linkedin Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="linkedin_id" type="text" default="" label="Linkedin ID" description="Enter Linkedin ID" size="50" showon="showlinkedin:1"/>				
+				<field name="linktype" class="btn-group btn-group-yesno" type="radio" default="0" label="Account type" description="Choose account type" showon="showlinkedin:1">
+					<option value="0">User</option>
+					<option value="1">Company</option>
+				</field>
+				<field name="uselinkcustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showlinkedin:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>				
+				<field name="showlinkcustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom Linkedin Icon" description="Show custom Linkedin Icon" showon="showlinkedin:1[AND]uselinkcustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom Linkedin Icon" name="customlinkicon" type="media" directory="" showon="showlinkedin:1[AND]showlinkcustomicon:1[AND]uselinkcustomsettings:1"/>
+				<field name="showlinkclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showlinkedin:1[AND]uselinkcustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_link" type="text" default="" label="Linkedin custom label" hint="Linkedin" description="Linkedin" size="50" showon="showlinkedin:1[AND]showlinkclbl:1"/>
+				
+				<field type="spacer" name="nfi9" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showlinkedin:1" />
+				<field name="showlinkedinicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showlinkedin:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+								
+				<field type="spacer" name="myspacer6" hr="true" />				
+				
+				<field name="showinstagram" class="btn-group btn-group-yesno" type="radio" default="1" label="Show Instagram Icon" description="Show Instagram Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="instagram_id" type="text" default="" label="Instagram ID" description="Enter Instagram ID" size="50" showon="showinstagram:1"/>				
+				<field name="useinstacustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showinstagram:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showinstacustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom Instagram Icon" description="Show custom Instagram Icon" showon="showinstagram:1[AND]useinstacustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom Instagram Icon" name="custominstaicon" type="media" directory="" showon="showinstagram:1[AND]showinstacustomicon:1[AND]useinstacustomsettings:1"/>
+				<field name="showinstaclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showinstagram:1[AND]useinstacustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_insta" type="text" default="" label="Instagram custom label" hint="Instagram" description="Instagram" size="50" showon="showinstagram:1[AND]showinstaclbl:1[AND]useinstacustomsettings:1"/>
+				
+				<field type="spacer" name="nfi11" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showinstagram:1" />
+				<field name="showinstagramicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showinstagram:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="RSS">
+				
+				<field name="showrss" class="btn-group btn-group-yesno" type="radio" default="1" label="Show RSS Icon" description="Show RSS Icon">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="rss_url" type="text" default="" label="RSS" description="Enter RSS URL" size="50" showon="showrss:1"/>				
+				<field name="usersscustomsettings" class="btn-group btn-group-yesno" type="radio" default="0" label="Use custom Settings" description="Use custom settings" showon="showrss:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showrsscustomicon" class="btn-group btn-group-yesno" type="radio" default="0" label="Show custom RSS Icon" description="Show custom RSS Icon" showon="showrss:1[AND]usersscustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field label="Custom RSS Icon" name="customrssicon" type="media" directory="" showon="showrss:1[AND]showrsscustomicon:1[AND]usersscustomsettings:1"/>
+				<field name="showrssclbl" class="btn-group btn-group-yesno" type="radio" default="0" label="Use Custom labels" description="Use Custom labels" showon="showrss:1[AND]usersscustomsettings:1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clbl_rss" type="text" default="" label="RSS custom label" hint="RSS" description="RSS" size="50" showon="showrss:1[AND]showrssclbl:1[AND]usersscustomsettings:1"/>
+				
+				<field type="spacer" name="nfi12" label="&lt;b&gt;For Non-Floating Icons&lt;/b&gt;" showon="showrss:1" />
+				<field name="showrssicon" class="btn-group btn-group-yesno" type="radio" default="2" label="Show icon or text" description="Show icon or text" showon="showrss:1">
+					<option value="0">Icon</option>
+					<option value="1">Text</option>
+					<option value="2">Both</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="CUSTOM">
+				
+				<field name="custsoicons" type="subform"
+					formsource="modules/mod_social_icons/custom_icons.xml" multiple="true"
+					label="Custom Social Icons" description="Custom Social Icons" />
+				
+			</fieldset>
+			
+		</fields>
+	</config>
+	
+</extension>

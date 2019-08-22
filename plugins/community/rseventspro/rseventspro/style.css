@@ -1,0 +1,16 @@
+#community-wrap .rsepro_events {
+	list-style: none outside none;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+#community-wrap .rsepro_events_container {
+	width: 100%;
+}
+
+#community-wrap .rsepro_events_container h3 {
+	border-bottom: 1px solid #DDDDDD;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}

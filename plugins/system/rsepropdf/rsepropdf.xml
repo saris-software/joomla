@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - RSEvents!Pro PDF plugin</name>
+	<author>RSJoomla!</author>
+	<creationDate>24.08.2015</creationDate>
+	<copyright>Copyright (C) 2012 www.rsjoomla.com. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>http://www.rsjoomla.com</authorUrl>
+	<version>1.11</version>
+	<description><![CDATA[RSEvents!Pro PDF Plugin allows you to attach the event ticket to the activation email in PDF format.]]></description>
+	<scriptfile>script.php</scriptfile>
+	
+	<updateservers>
+        <server type="extension" priority="1" name="RSEvents! Pro - PDF Plugin">https://www.rsjoomla.com/updates/com_rseventspro/Plugins/plg_rsepropdf.xml</server>
+    </updateservers>
+	
+	<files>
+		<filename plugin="rsepropdf">rsepropdf.php</filename>
+		<filename>index.html</filename>
+		<folder>fields</folder>
+	</files>
+	
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_system_rsepropdf.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/system/rsepropdf/fields">
+				<field name="font" type="font" default="times" label="RSEPRO_PDF_FONT" description="RSEPRO_PDF_FONT_DESC" />
+				<field name="orientation" type="list" default="portrait" label="RSEPRO_PDF_ORIENTATION" description="RSEPRO_PDF_ORIENTATION_DESC">
+					<option value="portrait">RSEPRO_PDF_ORIENTATION_PORTRAIT</option>
+					<option value="landscape">RSEPRO_PDF_ORIENTATION_LANDSCAPE</option>
+				</field>
+				<field name="paper" type="list" default="a4" label="RSEPRO_PDF_PAPER" description="RSEPRO_PDF_PAPER_DESC">
+					<option value="4a0">4a0</option>
+					<option value="2a0">2a0</option>
+					<option value="a0">a0</option>
+					<option value="a1">a1</option>
+					<option value="a2">a2</option>
+					<option value="a3">a3</option>
+					<option value="a4">a4</option>
+					<option value="a5">a5</option>
+					<option value="a6">a6</option>
+					<option value="a7">a7</option>
+					<option value="a8">a8</option>
+					<option value="a9">a9</option>
+					<option value="a10">a10</option>
+					<option value="b0">b0</option>
+					<option value="b1">b1</option>
+					<option value="b2">b2</option>
+					<option value="b3">b3</option>
+					<option value="b4">b4</option>
+					<option value="b5">b5</option>
+					<option value="b6">b6</option>
+					<option value="b7">b7</option>
+					<option value="b8">b8</option>
+					<option value="b9">b9</option>
+					<option value="b10">b10</option>
+					<option value="c0">c0</option>
+					<option value="c1">c1</option>
+					<option value="c2">c2</option>
+					<option value="c3">c3</option>
+					<option value="c4">c4</option>
+					<option value="c5">c5</option>
+					<option value="c6">c6</option>
+					<option value="c7">c7</option>
+					<option value="c8">c8</option>
+					<option value="c9">c9</option>
+					<option value="c10">c10</option>
+					<option value="ra0">ra0</option>
+					<option value="ra1">ra1</option>
+					<option value="ra2">ra2</option>
+					<option value="ra3">ra3</option>
+					<option value="ra4">ra4</option>
+					<option value="sra0">sra0</option>
+					<option value="sra1">sra1</option>
+					<option value="sra2">sra2</option>
+					<option value="sra3">sra3</option>
+					<option value="sra4">sra4</option>
+					<option value="letter">letter</option>
+					<option value="legal">legal</option>
+					<option value="ledger">ledger</option>
+					<option value="tabloid">tabloid</option>
+					<option value="executive">executive</option>
+					<option value="folio">folio</option>
+					<option value="commercial #10 envelope">commercial #10 envelope</option>
+					<option value="catalog #10 1/2 envelope">catalog #10 1/2 envelope</option>
+					<option value="8.5x11">8.5x11</option>
+					<option value="8.5x14">8.5x14</option>
+					<option value="11x17">11x17</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id: faq.xml 20085 2011-01-05 02:42:55Z eddieajau $ -->
+<form>
+	<fieldset name="globalsettings">
+		<field name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			size="10"
+			default="0"
+			readonly="true"
+			class="readonly"
+		/>
+
+		<field name="date_format"
+			type="dateformat"
+			label="COM_JEFAQPRO_FIELD_DATEFORMAT_LABEL"
+			description="COM_JEFAQPRO_FIELD_DATEFORMAT_DESC"
+			class="inputbox"
+		>
+		</field>
+
+		<field name="theme" type="themes" label="COM_JEFAQPRO_FIELD_THEME_LABEL"
+			description="COM_JEFAQPRO_FIELD_THEME_DESC" class="inputbox" onchange="selectTheme(this.value)"
+		>
+		</field>
+		
+		<field name="orderby" type="orderby" label="COM_JEFAQPRO_FIELD_ORDERBY_LABEL"
+			description="COM_JEFAQPRO_FIELD_ORDERBY_DESC" class="inputbox"
+		>
+		</field>
+
+		<field name="sortby"
+			type="sortby"
+			label="COM_JEFAQPRO_FIELD_SORTBY_LABEL"
+			description="COM_JEFAQPRO_FIELD_SORTBY_DESC"
+			class="inputbox"
+		>
+		</field>
+
+	</fieldset>
+</form>

@@ -1,0 +1,54 @@
+table.rs_calendar_module {
+    font-size: 12px;
+}
+
+table.rs_calendar_module th {
+    background: none repeat scroll 0 0 #828282;
+    color: #FFFFFF;
+    text-align: center;
+    width: 35px;
+	line-height: 20px;
+}
+
+table.rs_calendar_module td { 
+	text-align: center; 
+	color: red; 
+	padding: 0 !important;
+	border: 1px solid #C8C8C8;
+}
+
+table.rs_calendar_module td.prev-month, table.rs_calendar_module td.next-month { 
+	color: grey; 
+}
+
+table.rs_calendar_module a{ 
+	text-decoration: none;
+	display: block;
+	line-height: 27px;
+}
+
+table.rs_calendar_module td.curr-day { 
+	font-weight: bold !important; 
+}
+
+table.rs_calendar_module td.has-events a { 
+	background: none repeat scroll 0 0 #E6E6E6;
+    font-weight: bold;
+}
+
+.rs_table tr, .rs_table td {
+	border: medium none;
+}
+
+.rs_clear {
+	width: 100%;
+	display: block;
+	clear: both;
+	height: 1px;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.rs_calendar_arrows_module {
+	padding: 5px;
+}

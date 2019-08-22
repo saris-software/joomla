@@ -1,0 +1,38 @@
+
+.jeSocial a {background:url(../images/social.png); }
+/* 24x24 Icons */
+#je_socialicons .jeSocial a.icon1{background-position: 0px 0px;}
+#je_socialicons .jeSocial a.icon2{background-position: 0px -24px;}
+#je_socialicons .jeSocial a.icon3{background-position: 0px -48px;}
+#je_socialicons .jeSocial a.icon4{background-position: 0px -72px;}
+#je_socialicons .jeSocial a.icon5{background-position: 0px -96px;}
+#je_socialicons .jeSocial a.icon6{background-position: 0px -120px;}
+#je_socialicons .jeSocial a.icon7{background-position: 0px -144px;}
+#je_socialicons .jeSocial a.icon8{background-position: 0px -168px;}
+#je_socialicons .jeSocial a.icon9{background-position: 0px -192px;}
+#je_socialicons .jeSocial a.icon10{background-position: 0px -216px;} 
+#je_socialicons .jeSocial a.icon11{background-position: 0px -240px;}
+#je_socialicons .jeSocial a.icon12{background-position: 0px -264px;}
+#je_socialicons .jeSocial a.icon13{background-position: 0px -288px;}
+#je_socialicons .jeSocial a.icon14{background-position: 0px -312px;}
+#je_socialicons .jeSocial a.icon15{background-position: 0px -336px;}
+#je_socialicons .jeSocial a.icon16{background-position: 0px -360px;}
+#je_socialicons .jeSocial a.icon17{background-position: 0px -384px;}
+
+#je_socialicons .jeSocial span.icon1{background-color: #265999;}
+#je_socialicons .jeSocial span.icon2{background-color: #00b1ef;}
+#je_socialicons .jeSocial span.icon3{background-color: #f32e31;}
+#je_socialicons .jeSocial span.icon4{background-color: #f00028;}
+#je_socialicons .jeSocial span.icon5{background-color: #ff5100;}
+#je_socialicons .jeSocial span.icon6{background-color: #00749c;}
+#je_socialicons .jeSocial span.icon7{background-color: #ef0020;}
+#je_socialicons .jeSocial span.icon8{background-color: #0081b2;}
+#je_socialicons .jeSocial span.icon9{background-color: #0076d3;}
+#je_socialicons .jeSocial span.icon10{background-color: #ff6f00;} 
+#je_socialicons .jeSocial span.icon11{background-color: #ff0000;}
+#je_socialicons .jeSocial span.icon12{background-color: #ff2519;}
+#je_socialicons .jeSocial span.icon13{background-color: #878d90;}
+#je_socialicons .jeSocial span.icon14{background-color: #ff7700;}
+#je_socialicons .jeSocial span.icon15{background-color: #7CC576;}
+#je_socialicons .jeSocial span.icon16{background-color: #ED1983;}
+#je_socialicons .jeSocial span.icon17{background-color: #5A6478;}

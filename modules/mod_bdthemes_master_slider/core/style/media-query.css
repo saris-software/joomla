@@ -1,0 +1,35 @@
+/*Desktop Modes*/
+@media only screen and (min-width: 960px) and (max-width: 1219px) {
+
+}	
+
+/*Tablet Modes*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.master-slider.ms-skin-modern .ms-slide .ms-layer {
+	  display: none;
+	}	
+	.master-slider.simple-slider .ms-slide .ms-layer {
+		display: inline-table;
+	}
+}
+
+
+/*Mobile Modes*/
+@media (max-width: 767px) {
+	.master-slider.ms-skin-modern .ms-slide .ms-layer,
+	.master-slider.simple-slider .ms-slide .ms-layer {
+	  display: none;
+	}
+	.master-slider.ms-skin-modern .ms-bullets{
+	  display: none;
+	}
+
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {}
+
+/*Small Screen Mobile Modes*/
+@media only screen and (max-width: 480px) {
+	
+}

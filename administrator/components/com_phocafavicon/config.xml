@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fields addfieldpath="/administrator/components/com_phocafavicon/models/fields">
+	
+	<fieldset name="upload_label" label="COM_PHOCAFAVICON_CONFIG_HEAD_UPLOAD_LABEL">
+	
+		<field name="upload_maxsize" type="text" size="20" default="3145728" label="COM_PHOCAFAVICON_FIELD_MAXIMUM_SIZE_UPLOAD_FILE_LABEL" description="COM_PHOCAFAVICON_FIELD_MAXIMUM_SIZE_UPLOAD_FILE_DESC"/>
+		
+<field name="upload_maxres_width" type="text" size="20" default="3072" label="COM_PHOCAFAVICON_FIELD_MAXIMUM_RES_UPLOAD_WIDTH_LABEL" description="COM_PHOCAFAVICON_FIELD_MAXIMUM_RES_UPLOAD_WIDTH_DESC"/>
+
+<field name="upload_maxres_height" type="text" size="20" default="2304" label="COM_PHOCAFAVICON_FIELD_MAXIMUM_RES_UPLOAD_HEIGHT_LABEL" description="COM_PHOCAFAVICON_FIELD_MAXIMUM_RES_UPLOAD_HEIGHT_DESC"/>
+		
+	</fieldset>
+	
+	<fieldset name="permissions_label" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+
+		<field name="rules" type="rules" component="com_phocafavicon" filter="rules" label="COM_PHOCAFAVICON_FIELD_JCONFIG_PERMISSIONS_LABEL" section="component" description="COM_PHOCAFAVICON_FIELD_JCONFIG_PERMISSIONS_DESC"/>
+	</fieldset>
+	
+	</fields>
+</config>

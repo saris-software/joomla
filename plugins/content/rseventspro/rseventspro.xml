@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" version="2.5" type="plugin" group="content">
+	<name>plg_content_rseventspro</name>
+	<creationDate>July 2013</creationDate>
+	<author>rsjoomla.com</author>
+	<copyright>Copyright 2008-2013 RSJoomla.com All rights reserved!</copyright>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>http://www.rsjoomla.com</authorUrl>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>1.1</version>
+	<description>PLG_CONTENT_RSEVENTSPRO_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	
+	<updateservers>
+        <server type="extension" priority="1" name="RSEvents! Pro - Content Plugin">https://www.rsjoomla.com/updates/com_rseventspro/Plugins/plg_content.xml</server>
+    </updateservers>
+	
+	<files>
+		<filename plugin="rseventspro">rseventspro.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_rseventspro.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_rseventspro.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="ordering" type="list" default="start" label="PLG_CONTENT_RSEVENTSPRO_FIELD_ORDERING" description="PLG_CONTENT_RSEVENTSPRO_FIELD_ORDERING_DESC">
+					<option value="name">PLG_CONTENT_RSEVENTSPRO_FIELD_NAME_ORDERING</option>
+					<option value="start">PLG_CONTENT_RSEVENTSPRO_FIELD_STARTDATE_ORDERING</option>
+				</field>
+				
+				<field name="order" type="list" default="DESC" label="PLG_CONTENT_RSEVENTSPRO_FIELD_ORDERING_DIRECTION" description="PLG_CONTENT_RSEVENTSPRO_FIELD_ORDERING_DIRECTION_DESC">
+					<option value="DESC">PLG_CONTENT_RSEVENTSPRO_FIELD_DESCENDING</option>
+					<option value="ASC">PLG_CONTENT_RSEVENTSPRO_FIELD_ASCENDING</option>
+				</field>
+				
+				<field name="itemid" type="text" class="input-small" size="5" default="" description="PLG_CONTENT_RSEVENTSPRO_FIELD_ITEMID_DESC" label="PLG_CONTENT_RSEVENTSPRO_FIELD_ITEMID_LABEL" />
+				<field name="limit" type="text" default="5" label="PLG_CONTENT_RSEVENTSPRO_FIELD_LIMIT" description="PLG_CONTENT_RSEVENTSPRO_FIELD_LIMIT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

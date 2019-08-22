@@ -1,0 +1,47 @@
+Version 3.0
+1)	Added custom links option.
+2)	Backend fixes.
+3)	Major bugs fixed.
+4)	Linkedin company profile.
+
+Version 2.9
+1)	Google+ unregistered users support.
+2)	YouTube Channel option added.
+3)	CSS improved.
+4)	Image sprite added instead of using multiple images.
+5)	Custom settings hidden by default.
+
+Version 2.8
+1)	Added updater support.
+
+Version 2.7
+1)	Custom label option added.
+
+Version 2.6
+1)	Yahoo! chat link removed.
+
+Version 2.5
+1)	Instagram icon added.
+
+Version 2.4
+1)	RSS icon added.
+2)	Custom icon option added.
+
+Version 2.3
+1)	New look and feel. Grouped icons.
+
+Version 2.2
+1)	YouTube optioon added.
+
+Version 2.1
+1)	Icon & Text show option added.
+
+Version 2.0
+1)	Back-end improved.
+2)	Social media links bug removed
+
+Version 1.1
+1)	Minor bugs fixed.
+
+Version 1.0
+1)	First version of Social Icons Module.

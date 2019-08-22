@@ -1,0 +1,141 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// ------------------------------------------------
+// SLIDESHOW STYLE OWL
+// ------------------------------------------------
+.acm-slideshow {
+  .owl-carousel {
+    cursor: move;
+    padding: 0;
+    overflow: hidden;
+    background: @gray-dark;
+    .transition(all 400ms)
+
+    .owl-wrapper-outer {
+      z-index: 0;
+    }
+
+    // Control
+    .owl-controls {
+      margin: 0;
+
+      .owl-pagination {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        width: 100%;
+
+        .owl-page {
+          span {
+            margin: 5px;
+            height: 9px;
+            width: 9px;
+          }
+
+          &.active {
+            span {
+              background: @brand-primary;
+            }
+          }
+        }
+      }
+
+      .owl-buttons {
+        > div {
+          border-radius: 0;
+          background: @brand-primary;
+          position: absolute;
+          top: 50%;
+          line-height: 50px;
+          left: -50px;
+          font-size: 12px;
+          padding: 0;
+          margin: 0;
+          margin-top: -25px;
+          text-align: center;
+          height: 50px;
+          width: 50px;
+          .opacity(0.6);
+          .transition(all 500ms);
+
+          &:hover,&:focus,&:active {
+            .opacity(0.8);
+          }
+
+          &.owl-next {
+            right: -50px;
+            left: auto;
+            margin-left: 0;
+          }
+        }
+
+        @media (max-width: @screen-xs-max) {
+          display: none;
+        }
+      }
+    }
+
+    &:hover {
+      .owl-buttons {
+        > div {
+          left: 0;
+
+          &.owl-next {
+            right: 0;
+          }
+        }
+      }
+    }
+
+    // Item Slideshow
+    .item {
+      .img-bg {
+        width: 100%;
+      }
+      
+      .item-info {
+        background: linear-gradient(transparent,#000);
+        bottom: 0;
+        color: @white;
+        padding: @grid-gutter-width;
+        position: absolute;
+        left: 0;
+        width: 100%;
+
+        // Label
+        > span {
+          text-transform: uppercase;
+          font-size: @t3-font-size-smaller - 1px;
+          font-weight: 600;
+        }
+
+        // Title
+        h2 {
+          color: @white;
+          margin-top: 0;
+          font-size: @font-size-h1;
+          font-weight: 700;
+
+          // Mobile view
+          @media (max-width: @screen-xs-max) {
+            font-size: @font-size-h3;
+          }
+        }
+
+        // Description
+        > p {
+          // Tablet/desktop view
+          @media (min-width: @screen-sm-min) {
+            font-size: @t3-font-size-big;
+          }
+        }
+      }
+    }
+  }
+}

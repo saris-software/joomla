@@ -1,0 +1,10 @@
+.mod_slider_inner > .item {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+.mod_slider_caption {
+	bottom: auto;
+}

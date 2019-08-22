@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.1" method="upgrade">
+	<name>RAXO Default Module Layout</name>
+	<author>RAXO Group</author>
+	<copyright>Copyright (C) 2009-2016 RAXO Group. All rights reserved.</copyright>
+	<authorEmail>support@raxo.org</authorEmail>
+	<authorUrl>http://www.raxo.org</authorUrl>
+	<license>
+		GNU General Public License v2.0 for PHP files.
+		If not otherwise stated, all other files (CSS, JS, images, icons, etc) are NOT GPL, these files are under RAXO Commercial License.
+	</license>
+	<version>3.0</version>
+	<creationDate>October 2015</creationDate>
+	<description>
+		<![CDATA[<h3 style="margin-left:10px">RAXO Default <span style="font-weight:normal">(Module Layout)</span></h3>
+		<p>You can use this layout by selecting it in the Module Settings > Display Options > Module Layout.</p>]]>
+	</description>
+	<fileset>
+		<files target="modules/mod_raxo_allmode/tmpl">
+			<folder>allmode-default</folder>
+			<filename>allmode-default.php</filename>
+			<filename>allmode-default.xml</filename>
+		</files>
+	</fileset>
+</extension>

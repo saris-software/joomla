@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: helloworld.xml 14 2009-11-02 18:35:20Z chdemko $ -->
+<config>
+	<fieldset
+		name="faq"
+		label="COM_JEFAQPRO_CONFIG_COMPONENT_SETTINGS_LABEL"
+		description="COM_JEFAQPRO_CONFIG_COMPONENT_SETTINGS_DESC"
+	>
+		<field
+			name="show_footertext"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_FOOTERTEXT_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_FOOTERTEXT_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="captcha_show"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_CAPTCHA_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_CAPTCHA_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_posteddate"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_POSTEDDATE_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_POSTEDDATE_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_postedby"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_POSTEDBY_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_POSTEDBY_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_hits"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_HITS_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_HITS_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_votes"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_VOTES_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_VOTES_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="add_votes"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_ADD_VOTES_LABEL"
+			description="COM_JEFAQPRO_FIELD_ADD_VOTES_DESC"
+			default="0"
+			class="btn-group"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="show_onlyregusers"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_ONLYREGUSERS_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_REGUSERS_DESC"
+			default="0"
+			class="btn-group"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="auto_publish"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_AUTO_PUBLISH_LABEL"
+			description="COM_JEFAQPRO_FIELD_AUTO_PUBLISH_DESC"
+			default="0"
+			class="btn-group"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="show_des_cat"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_DESCRIPTION_CATEGORIZED_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_DESCRIPTION_CATEGORIZED_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="show_expand_collapse"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_EXPAND_COLLAPSE_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_EXPAND_COLLAPSE_DESC"
+			default="0"
+			class="btn-group"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		
+		<field
+			name="expand_first"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_EXPAND_FIRST_LABEL"
+			description="COM_JEFAQPRO_FIELD_EXPAND_FIRST_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field
+			name="show_backto_cat"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_BACK_TO_CATEGORY_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_BACK_TO_CATEGORY_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_pagination"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SHOW_PAGINATION_LABEL"
+			description="COM_JEFAQPRO_FIELD_SHOW_PAGINATION_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+	</fieldset>
+
+	<fieldset
+		name="email"
+		label="COM_JEFAQPRO_CONFIG_COMPONENT_EMAILSETTINGS_LABEL"
+		description="COM_JEFAQPRO_CONFIG_COMPONENT_EMAILSETTINGS_DESC"
+	>
+		<field
+			name="send_user"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SENDUSER_LABEL"
+			description="COM_JEFAQPRO_FIELD_SENDUSER_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="send_admin"
+			type="radio"
+			label="COM_JEFAQPRO_FIELD_SENDADMIN_LABEL"
+			description="COM_JEFAQPRO_FIELD_SENDADMIN_DESC"
+			default="1"
+			class="btn-group"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="emailid"
+			default="admin@emailid.com"
+			type="text"
+			label="COM_JEFAQPRO_FIELD_EMAILID_LABEL"
+			description="COM_JEFAQPRO_FIELD_EMAILID_DESC"
+			class="inputbox"
+			size="30"
+		 />
+	</fieldset>
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+	>
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_jefaqpro"
+			section="component"
+		/>
+	</fieldset>
+</config>
+

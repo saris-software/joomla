@@ -1,0 +1,148 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Mono Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+
+/* MAIN STYLE
+---------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto",sans-serif;
+	font-size: 14px;
+	line-height: 1.625;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mask */
+
+
+
+/* OutLine */
+#outline {
+	margin-top: 9%;
+	text-align: center;
+}
+
+/* Eror Code */
+.error-code {
+	color: #2D7BB2;
+	font-size: 230px;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: -10px;
+}
+
+.error-code span {
+    position: relative;
+    z-index: 1;
+    color: #8DAB39;
+    font-weight: bold;
+}
+
+.error-code span.first,
+.error-code span.last {
+    z-index: 2;
+    color: #2D7BB2;
+}
+
+
+/* Message Error */
+.wrap-text {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+/* Message Error */
+.error-message {
+	color: #333;
+	font-size: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+
+.des-message {
+}
+
+.error-message:after {
+	background-color: #333;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	width: 60px;
+	margin-left: -30px;
+}
+
+#errorboxbody p {
+	color: #999;
+	display: block;
+	margin: 0 0 30px;
+}
+
+/* Button Home */
+.button-home {
+	background: #2c79b3;
+	border: 1px solid #2c79b3;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 13px 50px;
+	opacity: 0;
+}
+
+.button-home.show {
+	transform: rotateX(0);
+	opacity: 1;
+}
+
+.button-home:hover,
+.button-home:focus,
+.button-home:active {
+	background: #225d8a;
+	border-color: #225d8a;
+}
+
+@media (max-width:  360px){
+
+	/* OutLine */
+	#outline {
+		margin-top: 20%;
+	}
+
+	/* Eror Code */
+	.error-code {
+	  font-size: 150px;
+	}
+
+	/* Message Error */
+	.error-message {
+	}
+
+	/* Message Error */
+	.error-message h2 {
+	  font-size: 24px;
+	}
+}

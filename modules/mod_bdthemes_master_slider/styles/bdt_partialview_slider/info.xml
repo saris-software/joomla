@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style>
+	<info>
+		<name>bdt_partialview_slider</name>
+		<author>BdThemes Ltd</author>
+		<desc>Master Slider: Partialview Slider template.</desc>
+		<version>1.0</version>
+	</info>
+	<config>
+		<field type="select" name="skins_style" label="Skins Style" desc="The slide changing transition. As: basic,fade,mask,wave,flow,scale" default="default">			
+			<option value="default">Default</option>
+			<option value="black-1">Black 1</option>
+			<option value="black-2">Black 2</option>
+			<option value="contrast">Contrast</option>
+			<option value="light-2">Light 2</option>
+			<option value="light-4">Light 4</option>
+			<option value="light-5">Light 5</option>
+			<option value="light-6">Light 6</option>
+			<option value="metro">Metro</option>
+			<option value="modern">Modern</option>
+		</field>
+
+		<field type="text" name="image_width" label="Slider Width" desc="Slide image width in pixels" default="640" unit="px" />
+		<field type="text" name="image_height" label="Slider Height" desc="Slide image height in pixels" default="320" unit="px" />	
+		<field type="text" name="quality" label="Image Quality" desc="Quality of images (used in the JPG images) - percentage value between 0 and 100." default="95" unit="%" />
+
+		<field type="select" name="smooth_height" label="Smooth Height" desc="Whether the slider uses smooth animation while its height changes." default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+
+
+		<field type="select" name="grab_cursor" label="Grab Cursor" desc="You can enable grab cursor when you hover on the slider." default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+		<field type="select" name="mouse_drag" label="Mouse Drag" desc="You can enable grab cursor when you hover on the slider." default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+		<field type="select" name="mouse_wheel" label="Mouse Wheel" desc="If you select enable and then wheel mouse on slider, so it will be sliding " default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+
+
+		<field type="text" name="animation_speed" label="Animation Speed" desc="Animation speed in miliseconds" default="17" class="gk_switch" unit="1 to 100" />
+		<field type="select" name="animation_loop" label="Animation Loop" desc="Enables the continuous sliding mode." default="true" >
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+		<field type="select" name="animation_autoplay" label="Auto Animation" desc="Autoanimation of the slides" default="true">
+			<option value="true">Enabled</option>
+			<option value="false">Disabled</option>
+		</field>
+
+		<field type="select" name="layout_view" label="Layout View" desc="The slide changing transition. As:wave,flow" default="partialWave">
+			<option value="partialWave">Partial Wave</option>
+			<option value="fadeWave">Partial Fade Wave</option>
+			<option value="fadeFlow">Partial Fade Flow</option>
+		</field>
+
+		
+		<field type="switch" name="pagination" label="Pagination" desc="here we've added bulet control to the slider." default="1" class="gk_switch" />
+		<field type="switch" name="navigation" label="Navigation" desc="here we've added arrow control to the slider." default="1" class="gk_switch" />
+
+	</config>
+</style>
