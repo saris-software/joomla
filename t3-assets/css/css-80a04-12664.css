@@ -1,0 +1,18 @@
+
+
+/*===============================
+/anglican22/templates/ja_edenite_ii/css/custom.css
+================================================================================*/
+img{max-width:100%;vertical-align:middle;margin-top:-15px;margin-bottom:-20px}.navbar-default .navbar-nav > .open.active > a,.navbar-default .navbar-nav > .open.active > span,.navbar-default .navbar-nav > .open.active > a:hover,.navbar-default .navbar-nav > .open.active > span:hover,.navbar-default .navbar-nav > .open.active > a:focus,.navbar-default .navbar-nav > .open.active > span:focus{background:linear-gradient(#d4af37,#d4af37);color:#ffffff}.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > span,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > span:hover,.navbar-default .navbar-nav > .active > a:focus,.navbar-default .navbar-nav > .active > span:focus{color:#d4af37;background:linear-gradient(#1d4f76,#1d4f76)}.t3-content-mass-bottom{margin-top:-55px}.t3-mainbody{padding-top:10px;padding-bottom:2px}.t3-copyright{color:#555555;font-size:12px;padding:10px 0 10px}.article-info dd{display:none;margin-left:0;margin-right:5px;white-space:nowrap;padding-top:20px}.article-title,.article-header h1{color:#d4af37;margin:0 0 10px 0;font-size:24px}.navbar-default .navbar-nav > li > a,.navbar-default .navbar-nav > li > span{border-right:1px solid #276b9f;color:#d4af37}.t3-megamenu .mega-nav > li a,.t3-megamenu .dropdown-menu .mega-nav > li a{color:#d4af37}
+
+
+/*===============================
+/anglican22/modules/mod_visitorcounter/mod_visitorcounter.css
+================================================================================*/
+.visitorcounter{width:95%;margin:auto}.visitorcounter .floatleft{float:left}.visitorcounter .floatright{float:right}.visitorcounter .clearboth{clear:both}.visitorcounter .center{text-align:center}.visitorcounter ul li{font-weight:bold}.visitorcounter p{clear:both;margin-bottom:6px}
+
+
+/*===============================
+/anglican22/media/mod_rseventspro_calendar/css/style.css
+================================================================================*/
+table.rs_calendar_module{font-size:12px}table.rs_calendar_module th{background:none repeat scroll 0 0 #828282;color:#FFFFFF;text-align:center;width:35px;line-height:20px}table.rs_calendar_module td{text-align:center;color:red;padding:0 !important;border:1px solid #C8C8C8}table.rs_calendar_module td.prev-month,table.rs_calendar_module td.next-month{color:grey}table.rs_calendar_module a{text-decoration:none;display:block;line-height:27px}table.rs_calendar_module td.curr-day{font-weight:bold !important}table.rs_calendar_module td.has-events a{background:none repeat scroll 0 0 #E6E6E6;font-weight:bold}.rs_table tr,.rs_table td{border:medium none}.rs_clear{width:100%;display:block;clear:both;height:1px;font-size:1px;line-height:1px}.rs_calendar_arrows_module{padding:5px}

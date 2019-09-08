@@ -3,9 +3,12 @@
   .always-show .dropdown-menu {
     display: block !important;
     position: static;
+    
+    
   }
   .open .dropdown-menu {
     display: block;
+  
   }
 }
 .t3-logo,

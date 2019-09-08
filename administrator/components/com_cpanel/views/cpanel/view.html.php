@@ -49,8 +49,8 @@ class CpanelViewCpanel extends JViewLegacy
 
 		try
 		{
-			$messages_model = FOFModel::getTmpInstance('Messages', 'PostinstallModel')->eid(700);
-			$messages       = $messages_model->getItemList();
+		//	$messages_model = FOFModel::getTmpInstance('Messages', 'PostinstallModel')->eid(700);
+		//	$messages       = $messages_model->getItemList();
 		}
 		catch (RuntimeException $e)
 		{
